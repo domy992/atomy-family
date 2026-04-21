@@ -21,7 +21,7 @@ export default async function DermaRealCicaPage({ params }: Props) {
     <ProductPageTemplate
       name={t("name")}
       tagline={t("tagline")}
-      heroImage="/images/produkty/evening/evening ilustrace.webp"
+      heroImage="/images/hero/top_produkty_01.png"
       introText={t("intro")}
       problem={t("problem")}
       usps={[

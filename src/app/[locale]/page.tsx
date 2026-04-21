@@ -26,7 +26,7 @@ const featuredProducts = [
   {
     key: "cica" as const,
     href: "/produkty/derma-real-cica",
-    image: "/images/produkty/evening/evening ilustrace.webp",
+    image: "/images/hero/top_produkty_01.png",
   },
 ];
 
@@ -84,6 +84,20 @@ export default async function HomePage({ params }: Props) {
                   sizes="(max-width: 768px) 80vw, 40vw"
                 />
               </div>
+              {/* Floating product shot */}
+              <div className="hidden sm:block absolute -top-4 -right-4 lg:-right-10 w-40 lg:w-56 aspect-square rounded-2xl bg-white shadow-xl p-3 rotate-3">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/hero/top_produkty_01.png"
+                    alt="Nejoblíbenější Atomy produkty"
+                    fill
+                    className="object-contain"
+                    priority
+                    sizes="(max-width: 1024px) 160px, 224px"
+                  />
+                </div>
+              </div>
+              {/* Social proof badge */}
               <div className="absolute bottom-0 -left-4 bg-white rounded-xl shadow-lg px-5 py-3">
                 <p className="text-xs text-text-muted">{t("heroBadgeLabel")}</p>
                 <p className="text-sm font-semibold text-text">{t("heroBadgeValue")}</p>

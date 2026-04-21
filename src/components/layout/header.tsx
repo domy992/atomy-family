@@ -25,12 +25,15 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/images/logo/Atomy logo bez pozadi.png"
-              alt="Atomy Family"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
+              alt="Atomy"
+              width={160}
+              height={160}
+              className="h-10 w-10 object-contain"
               priority
             />
+            <span className="text-lg font-semibold text-text tracking-tight">
+              <span className="text-primary">Family</span>
+            </span>
           </Link>
 
           <div className="hidden md:flex md:items-center md:gap-8">

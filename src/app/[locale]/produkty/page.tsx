@@ -26,7 +26,7 @@ const products = [
   {
     key: "cica" as const,
     href: "/produkty/derma-real-cica",
-    image: "/images/produkty/evening/evening ilustrace.webp",
+    image: "/images/hero/top_produkty_01.png",
   },
   {
     key: "evening" as const,
