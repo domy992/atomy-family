@@ -73,8 +73,8 @@ export default async function HomePage({ params }: Props) {
                 </Link>
               </div>
             </div>
-            <div className="relative max-w-sm mx-auto lg:max-w-none pb-8">
-              <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg">
+            <div className="relative w-full max-w-sm mx-auto lg:max-w-md pb-8">
+              <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg">
                 <Image
                   src="/images/milena/20250603_150311.jpg"
                   alt="Milena Nečkářová"
@@ -85,7 +85,7 @@ export default async function HomePage({ params }: Props) {
                 />
               </div>
               {/* Floating product shot */}
-              <div className="hidden sm:block absolute -top-4 -right-4 lg:-right-10 w-40 lg:w-56 aspect-square rounded-2xl bg-white shadow-xl p-3 rotate-3">
+              <div className="hidden sm:block absolute -top-6 -right-6 lg:-right-10 w-40 lg:w-52 aspect-square rounded-2xl bg-white shadow-xl p-3 rotate-3 z-10">
                 <div className="relative w-full h-full">
                   <Image
                     src="/images/hero/top_produkty_01.png"
@@ -93,14 +93,14 @@ export default async function HomePage({ params }: Props) {
                     fill
                     className="object-contain"
                     priority
-                    sizes="(max-width: 1024px) 160px, 224px"
+                    sizes="(max-width: 1024px) 160px, 208px"
                   />
                 </div>
               </div>
               {/* Social proof badge */}
-              <div className="absolute bottom-0 -left-4 bg-white rounded-xl shadow-lg px-5 py-3">
+              <div className="absolute bottom-4 -left-4 bg-white rounded-xl shadow-lg px-5 py-3 z-10 max-w-[180px]">
                 <p className="text-xs text-text-muted">{t("heroBadgeLabel")}</p>
-                <p className="text-sm font-semibold text-text">{t("heroBadgeValue")}</p>
+                <p className="text-sm font-semibold text-text leading-tight">{t("heroBadgeValue")}</p>
               </div>
             </div>
           </div>
