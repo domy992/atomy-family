@@ -2,13 +2,25 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ProductPageTemplate } from "@/components/produkty/product-page-template";
 
-export const metadata: Metadata = {
-  title: "Evening Care",
-};
-
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Products.evening" });
+  return {
+    title: t("name"),
+    description: t("intro").slice(0, 160),
+    alternates: { canonical: `/${locale}/produkty/evening-care` },
+    openGraph: {
+      title: `${t("name")} | Atomy Family`,
+      description: t("shortDesc"),
+      url: `/${locale}/produkty/evening-care`,
+      images: [{ url: "/images/produkty/evening/evening set.jpg", width: 1200, height: 1200, alt: t("name") }],
+    },
+  };
+}
 
 export default async function EveningCarePage({ params }: Props) {
   const { locale } = await params;

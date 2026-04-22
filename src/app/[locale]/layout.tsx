@@ -14,7 +14,12 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://atomy-family.vercel.app";
+const INDEXING_ENABLED = process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Atomy Family | Korejská kosmetika a wellness",
     template: "%s | Atomy Family",
@@ -31,14 +36,52 @@ export const metadata: Metadata = {
     "absolute cellactive",
   ],
   authors: [{ name: "Milena Nečkářová" }],
+  creator: "Milena Nečkářová",
+  publisher: "Atomy Family",
   openGraph: {
     type: "website",
     locale: "cs_CZ",
+    alternateLocale: ["en_US"],
     siteName: "Atomy Family",
+    url: SITE_URL,
+    title: "Atomy Family | Korejská kosmetika a wellness",
+    description:
+      "Objevte korejskou kosmetiku Atomy. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Nečkářové.",
+    images: [
+      {
+        url: "/images/og/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Atomy Family — Korejská kosmetika a wellness",
+      },
+    ],
   },
-  robots: {
-    index: false,
-    follow: false,
+  twitter: {
+    card: "summary_large_image",
+    title: "Atomy Family | Korejská kosmetika a wellness",
+    description:
+      "Korejská kosmetika Atomy. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Nečkářové.",
+    images: ["/images/og/og-default.png"],
+  },
+  robots: INDEXING_ENABLED
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      }
+    : { index: false, follow: false },
+  alternates: {
+    canonical: "/",
+    languages: {
+      cs: "/cs",
+      en: "/en",
+      "x-default": "/cs",
+    },
   },
 };
 

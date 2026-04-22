@@ -2,13 +2,25 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ProductPageTemplate } from "@/components/produkty/product-page-template";
 
-export const metadata: Metadata = {
-  title: "Derma Real Cica",
-};
-
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Products.cica" });
+  return {
+    title: t("name"),
+    description: t("intro").slice(0, 160),
+    alternates: { canonical: `/${locale}/produkty/derma-real-cica` },
+    openGraph: {
+      title: `${t("name")} | Atomy Family`,
+      description: t("shortDesc"),
+      url: `/${locale}/produkty/derma-real-cica`,
+      images: [{ url: "/images/hero/top_produkty_01.png", width: 1200, height: 1200, alt: t("name") }],
+    },
+  };
+}
 
 export default async function DermaRealCicaPage({ params }: Props) {
   const { locale } = await params;
