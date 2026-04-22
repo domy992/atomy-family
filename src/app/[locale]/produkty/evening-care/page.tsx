@@ -26,33 +26,33 @@ export default async function EveningCarePage({ params }: Props) {
       problem={t("problem")}
       usps={[
         {
-          title: locale === "cs" ? "Dvojité čištění" : "Double cleansing",
+          title: locale === "cs" ? "Deep Cleanser + Foam Cleanser" : "Deep Cleanser + Foam Cleanser",
           description: locale === "cs"
-            ? "Korejská metoda double cleansing — nejdříve odlíčení, pak hloubkové čištění. Pleť je dokonale čistá bez podráždění."
-            : "Korean double cleansing method — first makeup removal, then deep cleansing. Skin is perfectly clean without irritation.",
+            ? "Deep Cleanser odstraňuje make-up i nečistoty z pórů a vyživuje ženšenem, ginkgem a zeleným čajem. Nadýchaná pěna Foam Cleanser pleť očistí od smogu a stresu, zklidní ji beta-glukanem a fermentovanými složkami."
+            : "Deep Cleanser removes makeup and impurities while nourishing with ginseng, ginkgo and green tea. Rich Foam Cleanser washes away smog and stress, soothes skin with beta-glucan and fermented ingredients.",
         },
         {
-          title: locale === "cs" ? "Jemná formule" : "Gentle formula",
+          title: locale === "cs" ? "Peeling Gel" : "Peeling Gel",
           description: locale === "cs"
-            ? "Vhodná i pro citlivou pleť. Bez agresivních složek, s uklidňujícími bylinnými extrakty."
-            : "Suitable even for sensitive skin. Free of harsh ingredients, with soothing herbal extracts.",
+            ? "Jemný gel odstraní odumřelé buňky bez podráždění. Pleť je hladší, projasněná a lépe vstřebává krémy i séra. Nádherně voní po citrusu."
+            : "Gentle gel removes dead skin cells without irritation. Skin is smoother, brighter and better absorbs creams and serums. Lovely citrus scent.",
         },
         {
-          title: locale === "cs" ? "Skvělý poměr cena/kvalita" : "Great value for money",
+          title: locale === "cs" ? "Peel-Off Mask" : "Peel-Off Mask",
           description: locale === "cs"
-            ? "Cenově nejdostupnější řada Atomy — ideální pro začátek s korejskou kosmetikou bez velké investice."
-            : "Atomy's most affordable line — ideal for starting with Korean cosmetics without a big investment.",
+            ? "Zábavný krok, který pleť krásně vypne. Po zaschnutí se sloupne jako tenká vrstva a s ní odejdou nečistoty a maz. Obsahuje výtažky z ametystu a jadeitu — čistí, revitalizuje a rozjasňuje."
+            : "A fun step that firms the skin beautifully. Peels off as a thin layer, taking impurities and sebum with it. Contains amethyst and jade extracts — cleanses, revitalizes and brightens.",
         },
       ]}
       testimonial={{
         text: locale === "cs"
-          ? "Evening Care je můj základ — bez něj bych nezačala žádný večerní rituál. Pleť je po něm čistá a příjemně hydratovaná."
-          : "Evening Care is my foundation — I wouldn't start any evening ritual without it. My skin feels clean and pleasantly hydrated.",
+          ? "Evening Care set není jen o čištění pleti — je to malý večerní rituál, který ti pomůže zpomalit a dopřát si chvíli pro sebe."
+          : "The Evening Care set isn't just about cleansing — it's a little evening ritual that helps you slow down and take a moment for yourself.",
         author: locale === "cs" ? "Milena, osobní zkušenost" : "Milena, personal experience",
       }}
       techDetails={locale === "cs"
-        ? "Evening Care set obsahuje Foam Cleanser pro jemné pěnivé čištění, Deep Cleanser pro hloubkové odlíčení a Peeling Mask pro pravidelnou exfoliaci. Všechny produkty jsou formulovány s bylinným komplexem, který uklidňuje a hydratuje pleť. Dermatologicky testováno, vhodné pro všechny typy pleti včetně citlivé."
-        : "Evening Care set includes Foam Cleanser for gentle foaming cleansing, Deep Cleanser for deep makeup removal and Peeling Mask for regular exfoliation. All products are formulated with a herbal complex that soothes and hydrates the skin. Dermatologically tested, suitable for all skin types including sensitive."
+        ? "Komplexní čtyřkroková sada pro večerní péči o pleť, která kombinuje tradiční korejské ingredience s moderními technologiemi. Deep Cleanser a Foam Cleanser používejte každý večer — pleť krásně vyčistí, zklidní a připraví na noční regeneraci. Peeling Gel a Peel-Off masku zařaďte 1–2× týdně, když si chcete dopřát víc. Vhodné pro všechny typy pleti včetně citlivé."
+        : "A complete four-step evening skincare set combining traditional Korean ingredients with modern technology. Use Deep Cleanser and Foam Cleanser every evening — they cleanse, soothe and prepare skin for night regeneration. Add Peeling Gel and Peel-Off Mask 1–2× a week for extra care. Suitable for all skin types including sensitive."
       }
       purchaseSteps={[
         locale === "cs"

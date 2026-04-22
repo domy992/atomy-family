@@ -26,22 +26,22 @@ export default async function HemoHIMPage({ params }: Props) {
       problem={t("problem")}
       usps={[
         {
-          title: locale === "cs" ? "8 let výzkumu KAERI" : "8 years of KAERI research",
+          title: locale === "cs" ? "Podporuje imunitu a obranné buňky" : "Supports immunity and defence cells",
           description: locale === "cs"
-            ? "Vyvinutý korejským Atomického energetického výzkumným institutem. Jediný doplněk stravy z laboratoře světové úrovně."
-            : "Developed by the Korean Atomic Energy Research Institute. The only dietary supplement from a world-class laboratory.",
+            ? "Pomáhá tělu zvládat náročné situace, chrání ho a dodává sílu pokračovat — i když už jen odpočinek nestačí."
+            : "Helps the body handle demanding situations, protects it and gives strength to keep going — when rest alone isn't enough.",
         },
         {
-          title: locale === "cs" ? "3 korejské byliny" : "3 Korean herbs",
+          title: locale === "cs" ? "Tři byliny z tradiční korejské medicíny" : "Three herbs from traditional Korean medicine",
           description: locale === "cs"
-            ? "Andělika, pivoňka a ligusticum — tradiční korejské byliny ve vědecky optimalizované kombinaci."
-            : "Angelica, peony and ligusticum — traditional Korean herbs in a scientifically optimized combination.",
+            ? "Andělika, pivoňka a libeček — byliny, které se v tradiční korejské medicíně používají po staletí, v moderní technologií zesílené formě."
+            : "Angelica, peony and ligusticum — herbs used in traditional Korean medicine for centuries, in a modern strengthened form.",
         },
         {
-          title: locale === "cs" ? "Patentovaná formule" : "Patented formula",
+          title: locale === "cs" ? "Klinicky testovaný a patentovaný" : "Clinically tested and patented",
           description: locale === "cs"
-            ? "Speciální extrakce zachovává maximum účinných látek. Chráněna patenty v USA, Koreji, Japonsku a EU."
-            : "Special extraction preserves maximum active ingredients. Protected by patents in the US, Korea, Japan and EU.",
+            ? "Vyvinutý vědeckým týmem v jihokorejské státní výzkumné instituci KAERI. Důvěryhodný doplněk, který pomáhá milionům lidí po celém světě."
+            : "Developed by a scientific team at KAERI, a South Korean state research institute. A trusted supplement helping millions worldwide.",
         },
       ]}
       testimonial={{
@@ -51,8 +51,8 @@ export default async function HemoHIMPage({ params }: Props) {
         author: locale === "cs" ? "Milena, osobní zkušenost" : "Milena, personal experience",
       }}
       techDetails={locale === "cs"
-        ? "HemoHIM je vyroben z extraktu tří bylin — Angelica gigas (korejská andělika), Cnidium officinale (ligusticum) a Paeonia japonica (pivoňka). Speciální patentovaný proces extrakce zachovává polysacharidy a bioaktivní sloučeniny, které podporují funkci imunitního systému. Produkt je registrován jako zdravotní funkční potravina v Jižní Koreji a prošel rozsáhlými klinickými studiemi."
-        : "HemoHIM is made from extracts of three herbs — Angelica gigas, Cnidium officinale and Paeonia japonica. A special patented extraction process preserves polysaccharides and bioactive compounds that support immune system function. The product is registered as a health functional food in South Korea and has undergone extensive clinical studies."
+        ? "HemoHIM spojuje sílu tří bylin — anděliky (Angelica sinensis), pivoňky (Paeonia lactiflora) a libečku (Ligusticum chuanxiong) — které se v tradiční korejské medicíně používají po staletí. Díky moderní technologii jsou jejich účinky zesílené a dostupné v praktické formě sáčků s tekutinou. Doporučené dávkování: 1 sáček (20 ml) dvakrát denně, ideálně ráno a večer. Balení obsahuje 60 sáčků na jeden měsíc. HemoHIM je doplněk stravy a nenahrazuje pestrou a vyváženou stravu. Není určen pro děti, těhotné ani kojící ženy. Před užíváním se poraďte se svým lékařem nebo lékárníkem, zejména pokud užíváte jiné léky."
+        : "HemoHIM combines the power of three herbs — angelica (Angelica sinensis), peony (Paeonia lactiflora) and ligusticum (Ligusticum chuanxiong) — used in traditional Korean medicine for centuries. Modern technology amplifies their effects in a convenient sachet form. Recommended dosage: 1 sachet (20 ml) twice daily, ideally morning and evening. Box contains 60 sachets for one month. HemoHIM is a dietary supplement and does not replace a varied and balanced diet. Not intended for children, pregnant or breastfeeding women. Consult your doctor or pharmacist before use, especially if taking other medications."
       }
       certImages={[
         "/images/produkty/hemohim/hemohim certifikaty (1).png",

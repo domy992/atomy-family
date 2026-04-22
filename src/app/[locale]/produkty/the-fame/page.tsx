@@ -26,33 +26,33 @@ export default async function TheFamePage({ params }: Props) {
       problem={t("problem")}
       usps={[
         {
-          title: locale === "cs" ? "Premium složení" : "Premium composition",
+          title: locale === "cs" ? "Toner + Essence" : "Toner + Essence",
           description: locale === "cs"
-            ? "Koncentrované aktivní látky včetně kolagenu, peptidů a korejských bylinných extraktů v nejvyšší kvalitě."
-            : "Concentrated active ingredients including collagen, peptides and Korean herbal extracts in the highest quality.",
+            ? "Lehký toner osvěží a připraví pleť na vstřebání péče. Essence dodává intenzivní hydrataci a posiluje ochrannou bariéru díky beta-glukanu a fermentovaným extraktům."
+            : "Light toner refreshes and prepares skin to absorb care. Essence delivers intensive hydration and strengthens the barrier with beta-glucan and fermented extracts.",
         },
         {
-          title: locale === "cs" ? "Luxusní zážitek" : "Luxury experience",
+          title: locale === "cs" ? "Eye Cream + Lotion" : "Eye Cream + Lotion",
           description: locale === "cs"
-            ? "Hedvábná textura, jemná vůně a pocit opravdového rituálu péče. Každá aplikace je zážitek."
-            : "Silky texture, gentle fragrance and the feeling of a true care ritual. Every application is an experience.",
+            ? "Oční krém redukuje jemné linky a chrání citlivou oblast peptidy a ceramidy. Lotion udržuje rovnováhu olej–voda, arganový olej a bambucké máslo zajišťují hydrataci a pružnost."
+            : "Eye cream reduces fine lines and protects the delicate area with peptides and ceramides. Lotion maintains oil–water balance; argan oil and shea butter ensure hydration and elasticity.",
         },
         {
-          title: locale === "cs" ? "Profesionální výsledky" : "Professional results",
+          title: locale === "cs" ? "Nutrition Cream" : "Nutrition Cream",
           description: locale === "cs"
-            ? "Viditelné zpevnění, rozjasnění a hydratace. Výsledky srovnatelné s profesionálním ošetřením."
-            : "Visible firming, brightening and hydration. Results comparable to professional treatments.",
+            ? "Závěrečná péče plná výživy. Ceramidy a pět typů kyseliny hyaluronové dodávají hloubkovou hydrataci, posilují bariéru a podporují obnovu buněk."
+            : "Nourishing finale. Ceramides and five types of hyaluronic acid deliver deep hydration, strengthen the barrier and support cell renewal.",
         },
       ]}
       testimonial={{
         text: locale === "cs"
-          ? "The Fame je jako návštěva korejského beauty salonu — jen v pohodlí domova. Pleť je po něm neuvěřitelně hladká."
-          : "The Fame is like visiting a Korean beauty salon — in the comfort of home. My skin is incredibly smooth afterwards.",
+          ? "The Fame je jako návštěva korejského salonu — jen v pohodlí domova. Pleť je po něm neuvěřitelně hladká."
+          : "The Fame is like visiting a Korean salon — in the comfort of home. My skin is incredibly smooth afterwards.",
         author: locale === "cs" ? "Milena, osobní zkušenost" : "Milena, personal experience",
       }}
       techDetails={locale === "cs"
-        ? "The Fame kombinuje to nejlepší z korejského výzkumu — fermentované bylinné extrakty, mořský kolagen a patentované peptidové komplexy. Každý produkt prochází přísným testováním a splňuje nejvyšší korejské i evropské standardy kvality. Řada je vhodná pro všechny typy pleti, především pro zralou pleť 40+."
-        : "The Fame combines the best of Korean research — fermented herbal extracts, marine collagen and patented peptide complexes. Each product undergoes strict testing and meets the highest Korean and European quality standards. Suitable for all skin types, especially mature skin 40+."
+        ? "Řada The Fame je výsledkem spojení tradiční korejské moudrosti a moderní dermatologie. Byla vyvinuta tak, aby pomáhala pleti zvládat každodenní stres, obnovovala její přirozenou rovnováhu a zanechávala ji zdravou, jemnou a zářivou. Produkty jsou lehké, rychle se vstřebávají a vytvářejí harmonickou rutinu vhodnou i pro citlivou pokožku. Klíčové složky: fermentovaný filtrát z Bifida, extrakt z houby Phellinus Linteus, beta-glukan, peptidy, ceramidy, arganový olej, bambucké máslo a pět typů kyseliny hyaluronové."
+        : "The Fame line combines traditional Korean wisdom with modern dermatology. Developed to help skin handle everyday stress, restore its natural balance and leave it healthy, soft and radiant. Products are lightweight, fast-absorbing and create a harmonious routine suitable even for sensitive skin. Key ingredients: fermented Bifida filtrate, Phellinus Linteus mushroom extract, beta-glucan, peptides, ceramides, argan oil, shea butter and five types of hyaluronic acid."
       }
       purchaseSteps={[
         locale === "cs"
