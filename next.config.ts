@@ -16,8 +16,11 @@ const nextConfig: NextConfig = {
       // Hlavni stranky
       { source: "/home", destination: "/cs", permanent: true },
       { source: "/about", destination: "/cs/o-atomy", permanent: true },
+      { source: "/o-atomy-family", destination: "/cs/o-atomy", permanent: true },
       { source: "/contact", destination: "/cs/kontakt", permanent: true },
       { source: "/jak-nakupovat", destination: "/cs/spoluprace", permanent: true },
+      { source: "/products", destination: "/cs/produkty", permanent: true },
+      { source: "/samples", destination: "/cs/produkty", permanent: true },
 
       // Kategorie -> produkty prehled
       { source: "/pece-o-plet", destination: "/cs/produkty", permanent: true },
