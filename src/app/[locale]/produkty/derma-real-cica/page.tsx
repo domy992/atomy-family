@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${t("name")} | Atomy Family`,
       description: t("shortDesc"),
       url: `/${locale}/produkty/derma-real-cica`,
-      images: [{ url: "/images/hero/top_produkty_01.png", width: 1200, height: 1200, alt: t("name") }],
+      images: [{ url: "/images/hero/top_produkty_01.avif", width: 1200, height: 1200, alt: t("name") }],
     },
   };
 }
@@ -33,7 +33,7 @@ export default async function DermaRealCicaPage({ params }: Props) {
     <ProductPageTemplate
       name={t("name")}
       tagline={t("tagline")}
-      heroImage="/images/hero/top_produkty_01.png"
+      heroImage="/images/hero/top_produkty_01.avif"
       introText={t("intro")}
       problem={t("problem")}
       usps={[

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${t("name")} | Atomy Family`,
       description: t("shortDesc"),
       url: `/${locale}/produkty/absolute-cellactive`,
-      images: [{ url: "/images/produkty/absolute/Absolute Serum (1).png", width: 1200, height: 1200, alt: t("name") }],
+      images: [{ url: "/images/produkty/absolute/Absolute Serum (1).avif", width: 1200, height: 1200, alt: t("name") }],
     },
   };
 }
@@ -33,7 +33,7 @@ export default async function AbsoluteCellActivePage({ params }: Props) {
     <ProductPageTemplate
       name={t("name")}
       tagline={t("tagline")}
-      heroImage="/images/produkty/absolute/Absolute Serum (1).png"
+      heroImage="/images/produkty/absolute/Absolute Serum (1).avif"
       introText={t("intro")}
       problem={t("problem")}
       usps={[
@@ -92,10 +92,10 @@ export default async function AbsoluteCellActivePage({ params }: Props) {
         },
       ]}
       gallery={[
-        "/images/produkty/absolute/Absolute toner (1).png",
-        "/images/produkty/absolute/Absolute Serum (1).png",
-        "/images/produkty/absolute/Absolute ampoule (1).png",
-        "/images/produkty/absolute/Absolute eye complex (1).png",
+        "/images/produkty/absolute/Absolute toner (1).avif",
+        "/images/produkty/absolute/Absolute Serum (1).avif",
+        "/images/produkty/absolute/Absolute ampoule (1).avif",
+        "/images/produkty/absolute/Absolute eye complex (1).avif",
       ]}
       labels={{
         problemTitle: tC("znateToTitle"),

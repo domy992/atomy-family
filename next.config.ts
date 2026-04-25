@@ -11,6 +11,9 @@ import createNextIntlPlugin from "next-intl/plugin";
  * Zdroj starych URL: atomy-family.cz navigace (duben 2026).
  */
 const nextConfig: NextConfig = {
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   async redirects() {
     return [
       // Hlavni stranky

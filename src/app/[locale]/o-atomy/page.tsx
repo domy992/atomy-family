@@ -63,7 +63,7 @@ export default async function OAtomyPage({ params }: Props) {
             <div className="rounded-2xl bg-peach-50 p-8 text-center">
               <div className="w-16 h-16 mx-auto rounded-full bg-peach-100 flex items-center justify-center">
                 <Image
-                  src="/images/firma/absolutni_kvalita_webnode_ready.png"
+                  src="/images/firma/absolutni_kvalita_webnode_ready.avif"
                   alt={t("qualityTitle")}
                   width={40}
                   height={40}
@@ -79,7 +79,7 @@ export default async function OAtomyPage({ params }: Props) {
             <div className="rounded-2xl bg-sage-50 p-8 text-center">
               <div className="w-16 h-16 mx-auto rounded-full bg-sage-100 flex items-center justify-center">
                 <Image
-                  src="/images/firma/absolutni_cena_webnode_ready.png"
+                  src="/images/firma/absolutni_cena_webnode_ready.avif"
                   alt={t("priceTitle")}
                   width={40}
                   height={40}
@@ -95,7 +95,7 @@ export default async function OAtomyPage({ params }: Props) {
             <div className="rounded-2xl bg-nude-50 p-8 text-center">
               <div className="w-16 h-16 mx-auto rounded-full bg-nude-100 flex items-center justify-center">
                 <Image
-                  src="/images/firma/zakaznik_na_prvnim_miste_webnode_ready.png"
+                  src="/images/firma/zakaznik_na_prvnim_miste_webnode_ready.avif"
                   alt={t("customerTitle")}
                   width={40}
                   height={40}

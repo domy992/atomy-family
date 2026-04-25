@@ -6,27 +6,27 @@ const featuredProducts = [
   {
     key: "absolute" as const,
     href: "/produkty/absolute-cellactive",
-    image: "/images/produkty/absolute/Absolute Serum (1).png",
+    image: "/images/produkty/absolute/Absolute Serum (1).avif",
   },
   {
     key: "fame" as const,
     href: "/produkty/the-fame",
-    image: "/images/produkty/the-fame/Atomy Fame skin care set.png",
+    image: "/images/produkty/the-fame/Atomy Fame skin care set.avif",
   },
   {
     key: "hemohim" as const,
     href: "/produkty/hemohim",
-    image: "/images/produkty/hemohim/hemohim (1).png",
+    image: "/images/produkty/hemohim/hemohim (1).avif",
   },
   {
     key: "evening" as const,
     href: "/produkty/evening-care",
-    image: "/images/produkty/evening/evening set.jpg",
+    image: "/images/produkty/evening/evening set.avif",
   },
   {
     key: "cica" as const,
     href: "/produkty/derma-real-cica",
-    image: "/images/hero/top_produkty_01.png",
+    image: "/images/hero/top_produkty_01.avif",
   },
 ];
 
@@ -76,7 +76,7 @@ export default async function HomePage({ params }: Props) {
             <div className="relative w-full max-w-sm mx-auto lg:max-w-md pb-8">
               <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg">
                 <Image
-                  src="/images/milena/20250603_150311.jpg"
+                  src="/images/milena/20250603_150311.avif"
                   alt="Milena Nečkářová"
                   fill
                   className="object-cover"
@@ -88,7 +88,7 @@ export default async function HomePage({ params }: Props) {
               <div className="hidden sm:block absolute -top-6 -right-6 lg:-right-10 w-40 lg:w-52 aspect-square rounded-2xl bg-white shadow-xl p-3 rotate-3 z-10">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/images/hero/top_produkty_01.png"
+                    src="/images/hero/top_produkty_01.avif"
                     alt="Nejoblíbenější Atomy produkty"
                     fill
                     className="object-contain"
@@ -266,7 +266,7 @@ export default async function HomePage({ params }: Props) {
             <div className="relative">
               <div className="aspect-square rounded-3xl overflow-hidden shadow-lg max-w-sm mx-auto lg:mx-0">
                 <Image
-                  src="/images/milena/20250603_145001.jpg"
+                  src="/images/milena/20250603_145001.avif"
                   alt={t("aboutTitle")}
                   fill
                   className="object-cover"

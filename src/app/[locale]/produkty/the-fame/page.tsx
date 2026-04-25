@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${t("name")} | Atomy Family`,
       description: t("shortDesc"),
       url: `/${locale}/produkty/the-fame`,
-      images: [{ url: "/images/produkty/the-fame/Atomy Fame skin care set.png", width: 1200, height: 1200, alt: t("name") }],
+      images: [{ url: "/images/produkty/the-fame/Atomy Fame skin care set.avif", width: 1200, height: 1200, alt: t("name") }],
     },
   };
 }
@@ -33,7 +33,7 @@ export default async function TheFamePage({ params }: Props) {
     <ProductPageTemplate
       name={t("name")}
       tagline={t("tagline")}
-      heroImage="/images/produkty/the-fame/Atomy Fame skin care set.png"
+      heroImage="/images/produkty/the-fame/Atomy Fame skin care set.avif"
       introText={t("intro")}
       problem={t("problem")}
       usps={[
@@ -104,10 +104,10 @@ export default async function TheFamePage({ params }: Props) {
         },
       ]}
       gallery={[
-        "/images/produkty/the-fame/fame toner.png",
-        "/images/produkty/the-fame/fame essence.png",
-        "/images/produkty/the-fame/fame lotion.png",
-        "/images/produkty/the-fame/fame eye cream.png",
+        "/images/produkty/the-fame/fame toner.avif",
+        "/images/produkty/the-fame/fame essence.avif",
+        "/images/produkty/the-fame/fame lotion.avif",
+        "/images/produkty/the-fame/fame eye cream.avif",
       ]}
       labels={{
         problemTitle: tC("znateToTitle"),

@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Objevte korejskou kosmetiku Atomy. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Nečkářové.",
     images: [
       {
-        url: "/images/og/og-default.png",
+        url: "/images/og/og-default.avif",
         width: 1200,
         height: 630,
         alt: "Atomy Family — Korejská kosmetika a wellness",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Atomy Family | Korejská kosmetika a wellness",
     description:
       "Korejská kosmetika Atomy. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Nečkářové.",
-    images: ["/images/og/og-default.png"],
+    images: ["/images/og/og-default.avif"],
   },
   robots: INDEXING_ENABLED
     ? {

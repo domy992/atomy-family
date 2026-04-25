@@ -138,7 +138,7 @@ export default async function KontaktPage({ params }: Props) {
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
                       <Image
-                        src="/images/milena/20250603_145746.jpg"
+                        src="/images/milena/20250603_145746.avif"
                         alt={t("contactName")}
                         width={64}
                         height={64}

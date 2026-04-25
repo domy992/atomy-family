@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${t("name")} | Atomy Family`,
       description: t("shortDesc"),
       url: `/${locale}/produkty/evening-care`,
-      images: [{ url: "/images/produkty/evening/evening set.jpg", width: 1200, height: 1200, alt: t("name") }],
+      images: [{ url: "/images/produkty/evening/evening set.avif", width: 1200, height: 1200, alt: t("name") }],
     },
   };
 }
@@ -33,7 +33,7 @@ export default async function EveningCarePage({ params }: Props) {
     <ProductPageTemplate
       name={t("name")}
       tagline={t("tagline")}
-      heroImage="/images/produkty/evening/evening set.jpg"
+      heroImage="/images/produkty/evening/evening set.avif"
       introText={t("intro")}
       problem={t("problem")}
       usps={[
@@ -104,10 +104,10 @@ export default async function EveningCarePage({ params }: Props) {
         },
       ]}
       gallery={[
-        "/images/produkty/evening/Atomy foam cleanser.jpg",
-        "/images/produkty/evening/Atomy deep cleanser.jpg",
-        "/images/produkty/evening/Atomy peeling mask.jpg",
-        "/images/produkty/evening/Atomy Peel-off mask.jpg",
+        "/images/produkty/evening/Atomy foam cleanser.avif",
+        "/images/produkty/evening/Atomy deep cleanser.avif",
+        "/images/produkty/evening/Atomy peeling mask.avif",
+        "/images/produkty/evening/Atomy Peel-off mask.avif",
       ]}
       labels={{
         problemTitle: tC("znateToTitle"),

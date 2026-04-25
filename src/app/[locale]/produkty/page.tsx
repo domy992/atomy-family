@@ -11,27 +11,27 @@ const products = [
   {
     key: "absolute" as const,
     href: "/produkty/absolute-cellactive",
-    image: "/images/produkty/absolute/Absolute Serum (1).png",
+    image: "/images/produkty/absolute/Absolute Serum (1).avif",
   },
   {
     key: "fame" as const,
     href: "/produkty/the-fame",
-    image: "/images/produkty/the-fame/Atomy Fame skin care set.png",
+    image: "/images/produkty/the-fame/Atomy Fame skin care set.avif",
   },
   {
     key: "hemohim" as const,
     href: "/produkty/hemohim",
-    image: "/images/produkty/hemohim/hemohim (1).png",
+    image: "/images/produkty/hemohim/hemohim (1).avif",
   },
   {
     key: "cica" as const,
     href: "/produkty/derma-real-cica",
-    image: "/images/hero/top_produkty_01.png",
+    image: "/images/hero/top_produkty_01.avif",
   },
   {
     key: "evening" as const,
     href: "/produkty/evening-care",
-    image: "/images/produkty/evening/evening set.jpg",
+    image: "/images/produkty/evening/evening set.avif",
   },
 ];
 

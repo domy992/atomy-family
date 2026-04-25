@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${t("name")} | Atomy Family`,
       description: t("shortDesc"),
       url: `/${locale}/produkty/hemohim`,
-      images: [{ url: "/images/produkty/hemohim/hemohim (1).png", width: 1200, height: 1200, alt: t("name") }],
+      images: [{ url: "/images/produkty/hemohim/hemohim (1).avif", width: 1200, height: 1200, alt: t("name") }],
     },
   };
 }
@@ -33,7 +33,7 @@ export default async function HemoHIMPage({ params }: Props) {
     <ProductPageTemplate
       name={t("name")}
       tagline={t("tagline")}
-      heroImage="/images/produkty/hemohim/hemohim (1).png"
+      heroImage="/images/produkty/hemohim/hemohim (1).avif"
       introText={t("intro")}
       problem={t("problem")}
       usps={[
@@ -67,8 +67,8 @@ export default async function HemoHIMPage({ params }: Props) {
         : "HemoHIM combines the power of three herbs — angelica (Angelica sinensis), peony (Paeonia lactiflora) and ligusticum (Ligusticum chuanxiong) — used in traditional Korean medicine for centuries. Modern technology amplifies their effects in a convenient sachet form. Recommended dosage: 1 sachet (20 ml) twice daily, ideally morning and evening. Box contains 60 sachets for one month. HemoHIM is a dietary supplement and does not replace a varied and balanced diet. Not intended for children, pregnant or breastfeeding women. Consult your doctor or pharmacist before use, especially if taking other medications."
       }
       certImages={[
-        "/images/produkty/hemohim/hemohim certifikaty (1).png",
-        "/images/produkty/hemohim/hemohim certifikaty (2).png",
+        "/images/produkty/hemohim/hemohim certifikaty (1).avif",
+        "/images/produkty/hemohim/hemohim certifikaty (2).avif",
       ]}
       purchaseSteps={[
         locale === "cs"
@@ -115,7 +115,7 @@ export default async function HemoHIMPage({ params }: Props) {
         "/images/produkty/hemohim/hemohim byliny (1).webp",
         "/images/produkty/hemohim/hemohim byliny (2).webp",
         "/images/produkty/hemohim/hemohim byliny (3).webp",
-        "/images/produkty/hemohim/hemohim ilustrace.png",
+        "/images/produkty/hemohim/hemohim ilustrace.avif",
       ]}
       labels={{
         problemTitle: tC("znateToTitle"),
