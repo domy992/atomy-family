@@ -44,7 +44,7 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-peach-50 via-white to-sage-50">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-white">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -77,7 +77,7 @@ export default async function HomePage({ params }: Props) {
               <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg">
                 <Image
                   src="/images/milena/20250603_150311.avif"
-                  alt="Milena Nečkářová"
+                  alt="Milena Neckařová"
                   fill
                   className="object-cover"
                   priority
@@ -122,7 +122,7 @@ export default async function HomePage({ params }: Props) {
                 key={i}
                 className="text-center p-6 rounded-2xl bg-surface-warm hover:shadow-md transition-shadow"
               >
-                <div className="mx-auto w-12 h-12 rounded-full bg-peach-100 text-primary flex items-center justify-center">
+                <div className="mx-auto w-12 h-12 rounded-full bg-blue-100 text-primary flex items-center justify-center">
                   {i === 1 && (
                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.746 3.746 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
@@ -234,7 +234,7 @@ export default async function HomePage({ params }: Props) {
       {/* CTA — Spoluprace */}
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-gradient-to-br from-peach-100 via-peach-50 to-sage-50 p-8 sm:p-12 lg:p-16 text-center">
+          <div className="rounded-3xl bg-gradient-to-br from-blue-100 via-blue-50 to-sage-50 p-8 sm:p-12 lg:p-16 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-text">
               {t("ctaTitle")}
             </h2>

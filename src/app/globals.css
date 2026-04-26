@@ -5,14 +5,14 @@
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
 
-  /* === Brand Colors — warm, fresh, approachable === */
-  --color-peach-50: #fef7f3;
-  --color-peach-100: #fdeee6;
-  --color-peach-200: #fad9c8;
-  --color-peach-300: #f5b899;
-  --color-peach-400: #ef9468;
-  --color-peach-500: #e87040;
-  --color-peach-600: #d4552a;
+  /* === Brand Colors — clean, trustworthy, professional === */
+  --color-blue-50: #f0f6fb;
+  --color-blue-100: #ddeaf5;
+  --color-blue-200: #b8d4eb;
+  --color-blue-300: #7fb3d8;
+  --color-blue-400: #5a9bc8;
+  --color-blue-500: #3a7cb8;
+  --color-blue-600: #2d639a;
 
   --color-sage-50: #f4f7f4;
   --color-sage-100: #e6ede6;
@@ -48,12 +48,12 @@
   --color-gray-900: #171717;
 
   /* Semantic aliases */
-  --color-primary: var(--color-peach-500);
-  --color-primary-hover: var(--color-peach-600);
+  --color-primary: var(--color-blue-500);
+  --color-primary-hover: var(--color-blue-600);
   --color-accent: var(--color-sage-500);
   --color-accent-light: var(--color-sage-100);
   --color-surface: #ffffff;
-  --color-surface-warm: var(--color-peach-50);
+  --color-surface-warm: var(--color-blue-50);
   --color-surface-muted: var(--color-gray-50);
   --color-text: var(--color-gray-900);
   --color-text-muted: var(--color-gray-500);
@@ -95,6 +95,6 @@ html {
 
 /* Selection color */
 ::selection {
-  background: var(--color-peach-200);
+  background: var(--color-blue-200);
   color: var(--color-gray-900);
 }

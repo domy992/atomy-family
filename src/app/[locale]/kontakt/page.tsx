@@ -42,7 +42,7 @@ export default async function KontaktPage({ params }: Props) {
   return (
     <>
       {/* Contact info + form side by side */}
-      <section className="bg-gradient-to-br from-peach-50 via-white to-sage-50 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-white py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Contact info sidebar */}

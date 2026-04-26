@@ -26,7 +26,7 @@ export function LocaleSwitcher() {
           onClick={() => onChange(l)}
           className={`px-2 py-1 rounded-md transition-colors ${
             l === locale
-              ? "font-semibold text-primary bg-peach-50"
+              ? "font-semibold text-primary bg-blue-50"
               : "text-text-light hover:text-text-muted"
           }`}
         >

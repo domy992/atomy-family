@@ -42,7 +42,7 @@ export function SingleProductTemplate({
   return (
     <>
       {/* 1. Hero */}
-      <section className="bg-gradient-to-br from-peach-50 via-white to-sage-50 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-sage-50 py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -88,7 +88,7 @@ export function SingleProductTemplate({
             {benefits.map((benefit, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm border border-border/50"
+                className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm border border-border/50 border-l-4 border-l-primary"
               >
                 <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
@@ -130,20 +130,18 @@ export function SingleProductTemplate({
       {/* 4. For whom */}
       <section className="py-16 lg:py-20">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-text mb-8">
-              {labels.forWhomTitle}
-            </h2>
-            <div className="space-y-4">
-              {forWhom.map((item, i) => (
-                <p
-                  key={i}
-                  className="text-lg text-text-muted leading-relaxed"
-                >
-                  {item}
-                </p>
-              ))}
-            </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-text text-center mb-10">
+            {labels.forWhomTitle}
+          </h2>
+          <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {forWhom.map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-5 shadow-sm border border-border/50 text-center"
+              >
+                <p className="text-text-muted leading-relaxed">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -181,7 +179,7 @@ export function SingleProductTemplate({
           <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
               <svg
-                className="h-8 w-8 text-peach-300 mx-auto"
+                className="h-8 w-8 text-blue-300 mx-auto"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

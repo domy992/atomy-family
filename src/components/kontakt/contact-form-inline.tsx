@@ -26,7 +26,7 @@ export function ContactFormInline({
   defaultSubject,
 }: ContactFormInlineProps) {
   return (
-    <section className="py-16 lg:py-20 bg-gradient-to-br from-peach-50 via-white to-sage-50">
+    <section className="py-16 lg:py-20 bg-gradient-to-br from-blue-50 via-white to-white">
       <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-text text-center">

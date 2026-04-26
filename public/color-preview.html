@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atomy Family - Barevny nahled</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Atomy Steel Blue palette */
+    --blue-50: #f0f5fa;
+    --blue-100: #dce8f3;
+    --blue-200: #b8d1e8;
+    --blue-300: #89b4d6;
+    --blue-400: #5a96c4;
+    --blue-500: #3a7cb8;
+    --blue-600: #2d6399;
+
+    /* Soft warm neutral */
+    --warm-50: #faf9f7;
+    --warm-100: #f3f1ed;
+
+    /* Semantic */
+    --primary: var(--blue-500);
+    --primary-hover: var(--blue-600);
+    --surface-warm: var(--blue-50);
+    --surface-muted: #fafafa;
+    --text: #171717;
+    --text-muted: #737373;
+    --text-light: #a3a3a3;
+    --border: #e5e5e5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: #fff; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+    position: sticky; top: 0; background: #fff; z-index: 10;
+  }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-weight: 700; font-size: 20px; color: var(--primary); }
+  .logo span { color: var(--text); }
+  .nav { display: flex; gap: 32px; font-size: 14px; color: var(--text-muted); }
+  .nav a { text-decoration: none; color: inherit; }
+  .nav a:hover { color: var(--primary); }
+  .btn-primary {
+    background: var(--primary); color: #fff; border: none; padding: 10px 24px;
+    border-radius: 999px; font-size: 14px; font-weight: 500; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--primary-hover); }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--blue-50), #fff, var(--warm-50));
+    padding: 80px 0;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .hero-label { font-size: 13px; font-weight: 500; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+  .hero h1 { font-size: 42px; font-weight: 700; line-height: 1.2; margin-top: 12px; }
+  .hero p { font-size: 18px; color: var(--text-muted); line-height: 1.7; margin-top: 20px; }
+  .hero-img {
+    aspect-ratio: 1; background: var(--blue-100); border-radius: 24px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-light); font-size: 14px;
+  }
+
+  /* Benefits */
+  .benefits { padding: 80px 0; }
+  .section-title { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 40px; }
+  .benefit-card {
+    display: flex; align-items: start; gap: 16px;
+    background: #fff; border-radius: 16px; padding: 20px;
+    border: 1px solid var(--border); border-left: 4px solid var(--primary);
+    margin-bottom: 12px;
+  }
+  .benefit-icon {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--blue-50); color: var(--primary);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 16px;
+  }
+  .benefit-text { color: var(--text-muted); line-height: 1.6; }
+
+  /* For whom - grid */
+  .for-whom { padding: 80px 0; background: var(--surface-warm); }
+  .whom-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 800px; margin: 0 auto; }
+  .whom-card {
+    background: #fff; border-radius: 16px; padding: 24px; text-align: center;
+    border: 1px solid var(--border);
+  }
+  .whom-card .icon { font-size: 28px; margin-bottom: 12px; display: block; }
+  .whom-card p { font-size: 14px; color: var(--text-muted); line-height: 1.5; }
+
+  /* Product section - alternating */
+  .product-section { padding: 64px 0; }
+  .product-section.alt { background: var(--surface-muted); }
+  .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .product-grid.reverse .product-img { order: -1; }
+  .product-img {
+    aspect-ratio: 4/3; background: var(--blue-50); border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-light); font-size: 14px;
+  }
+  .product-name { font-size: 22px; font-weight: 700; }
+  .product-tagline { font-size: 14px; color: var(--primary); font-weight: 500; margin-top: 4px; }
+  .product-desc { color: var(--text-muted); line-height: 1.7; margin-top: 16px; }
+
+  /* Testimonial */
+  .testimonial { padding: 64px 0; background: var(--warm-100); text-align: center; }
+  .testimonial blockquote {
+    font-size: 18px; font-style: italic; color: var(--text);
+    max-width: 600px; margin: 0 auto; line-height: 1.7;
+  }
+  .testimonial cite { display: block; margin-top: 16px; font-size: 14px; color: var(--text-muted); font-style: normal; }
+
+  /* Contact form */
+  .contact { padding: 80px 0; background: linear-gradient(135deg, var(--blue-50), #fff, var(--warm-50)); }
+  .contact-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+  .form-field { text-align: left; margin-top: 16px; }
+  .form-field label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+  .form-field input, .form-field textarea, .form-field select {
+    width: 100%; padding: 12px 16px; border: 1px solid var(--border);
+    border-radius: 12px; font-size: 14px; font-family: inherit;
+    outline: none; transition: border-color 0.2s;
+  }
+  .form-field input:focus, .form-field textarea:focus, .form-field select:focus {
+    border-color: var(--primary); box-shadow: 0 0 0 3px rgba(58, 124, 184, 0.1);
+  }
+
+  /* Swatch comparison */
+  .swatches { padding: 60px 0; border-top: 1px solid var(--border); }
+  .swatch-title { font-size: 20px; font-weight: 700; text-align: center; margin-bottom: 32px; }
+  .swatch-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; max-width: 700px; margin: 0 auto; }
+  .swatch {
+    aspect-ratio: 1; border-radius: 12px; display: flex; align-items: end;
+    justify-content: center; padding: 8px; font-size: 11px; color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+  .swatch-label { text-align: center; font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+  /* Comparison old vs new */
+  .compare { padding: 40px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 800px; margin: 0 auto; }
+  .compare-box { border-radius: 16px; padding: 32px; text-align: center; }
+  .compare-box h3 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+  .compare-btn { display: inline-block; padding: 12px 32px; border-radius: 999px; color: #fff; font-weight: 500; font-size: 14px; margin-top: 12px; }
+
+  @media (max-width: 768px) {
+    .hero-grid, .product-grid, .form-row, .compare-grid { grid-template-columns: 1fr; }
+    .whom-grid { grid-template-columns: repeat(2, 1fr); }
+    .swatch-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero h1 { font-size: 32px; }
+    .product-grid.reverse .product-img { order: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">Atomy <span>Family</span></div>
+    <nav class="nav">
+      <a href="#">Produkty</a>
+      <a href="#">O Atomy</a>
+      <a href="#">Spoluprace</a>
+      <a href="#">Lifestyle</a>
+      <a href="#">Kontakt</a>
+    </nav>
+    <button class="btn-primary">Napiste mi</button>
+  </div>
+</header>
+
+<!-- Color comparison -->
+<section class="compare">
+  <div class="container">
+    <div class="section-title">Porovnani: stara vs nova paleta</div>
+    <div class="compare-grid">
+      <div class="compare-box" style="background: #fef7f3; border: 2px solid #e87040;">
+        <h3 style="color: #e87040;">Stara paleta (oranzova)</h3>
+        <p style="color: #737373;">Primary: #E87040</p>
+        <div class="compare-btn" style="background: #e87040;">Chci vedet vic</div>
+      </div>
+      <div class="compare-box" style="background: var(--blue-50); border: 2px solid var(--primary);">
+        <h3 style="color: var(--primary);">Nova paleta (Atomy blue)</h3>
+        <p style="color: #737373;">Primary: #3A7CB8</p>
+        <div class="compare-btn" style="background: var(--primary);">Chci vedet vic</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Swatches -->
+<section class="swatches">
+  <div class="container">
+    <div class="swatch-title">Nova paleta - Atomy Steel Blue</div>
+    <div class="swatch-grid">
+      <div>
+        <div class="swatch" style="background: var(--blue-50); color: var(--text);">50</div>
+        <div class="swatch-label">#f0f5fa</div>
+      </div>
+      <div>
+        <div class="swatch" style="background: var(--blue-100); color: var(--text);">100</div>
+        <div class="swatch-label">#dce8f3</div>
+      </div>
+      <div>
+        <div class="swatch" style="background: var(--blue-200);">200</div>
+        <div class="swatch-label">#b8d1e8</div>
+      </div>
+      <div>
+        <div class="swatch" style="background: var(--blue-300);">300</div>
+        <div class="swatch-label">#89b4d6</div>
+      </div>
+      <div>
+        <div class="swatch" style="background: var(--blue-400);">400</div>
+        <div class="swatch-label">#5a96c4</div>
+      </div>
+      <div>
+        <div class="swatch" style="background: var(--blue-500);">500</div>
+        <div class="swatch-label">#3a7cb8</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-label">HemoHIM</div>
+        <h1>Podpora pro telo, kdyz potrebuje vice nez jen odpocinek</h1>
+        <p>V dnesnim svete plnem stresu, spechu a unavy casto zapominame na to nejdulezitejsi - jak se citi nase telo uvnitr.</p>
+        <button class="btn-primary" style="margin-top: 24px;">Chci vedet vic</button>
+      </div>
+      <div class="hero-img">Hero obrazek produktu</div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits with accent stripe -->
+<section class="benefits">
+  <div class="container">
+    <div class="section-title">Co HemoHIM umi?</div>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10003;</div>
+        <div class="benefit-text">Podporuje imunitni system a obranne bunky v tele</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10003;</div>
+        <div class="benefit-text">Pomaha pri unavě a slabosti, fyzicke i psychicke</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10003;</div>
+        <div class="benefit-text">Pusobi prirozene, bez stimulantu a vedlejsich ucinku</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">&#10003;</div>
+        <div class="benefit-text">Je klinicky testovany, patentovany a duveryhodny</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- For whom - grid cards -->
+<section class="for-whom">
+  <div class="container">
+    <div class="section-title">HemoHIM je doporuceny pro:</div>
+    <div class="whom-grid">
+      <div class="whom-card">
+        <span class="icon" role="img" aria-hidden="true" style="font-size: 32px; color: var(--primary);">&#9673;</span>
+        <p>Seniory, kteri potrebuji doplnit energii</p>
+      </div>
+      <div class="whom-card">
+        <span class="icon" role="img" aria-hidden="true" style="font-size: 32px; color: var(--primary);">&#9673;</span>
+        <p>Pracovniky vycerpane z dlouhych smen</p>
+      </div>
+      <div class="whom-card">
+        <span class="icon" role="img" aria-hidden="true" style="font-size: 32px; color: var(--primary);">&#9673;</span>
+        <p>Studenty, kteri potrebuji fyzickou vzpruhu</p>
+      </div>
+      <div class="whom-card">
+        <span class="icon" role="img" aria-hidden="true" style="font-size: 32px; color: var(--primary);">&#9673;</span>
+        <p>Ridice na dlouhych trasach</p>
+      </div>
+      <div class="whom-card">
+        <span class="icon" role="img" aria-hidden="true" style="font-size: 32px; color: var(--primary);">&#9673;</span>
+        <p>Zeny v domacnosti unavene z kazdodenni pece</p>
+      </div>
+      <div class="whom-card">
+        <span class="icon" role="img" aria-hidden="true" style="font-size: 32px; color: var(--primary);">&#9673;</span>
+        <p>Sportovce s vysokou fyzickou zatezi</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product alternating (set template preview) -->
+<section class="product-section">
+  <div class="container">
+    <div class="product-grid">
+      <div>
+        <div class="product-name">Toner</div>
+        <div class="product-tagline">Prvni krok - probuzeni pleti</div>
+        <p class="product-desc">Toner plet jemne probudi a pripravi na dalsi peci. Odstrani zbytky necistot a obnovuje pH rovnovahu.</p>
+      </div>
+      <div class="product-img">Obrazek produktu (75% velikost)</div>
+    </div>
+  </div>
+</section>
+
+<section class="product-section alt">
+  <div class="container">
+    <div class="product-grid reverse">
+      <div>
+        <div class="product-name">Ampule</div>
+        <div class="product-tagline">Nejsilnejsi koncentrat</div>
+        <p class="product-desc">Ampule je nejsilnejsi koncentrat cele rady - maly elixir mladi, ktery cilene zpevnuje ochablou plet.</p>
+      </div>
+      <div class="product-img">Obrazek produktu (75% velikost)</div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial -->
+<section class="testimonial">
+  <div class="container">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--blue-200)" style="margin-bottom: 16px;">
+      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+    </svg>
+    <blockquote>&ldquo;HemoHIM pouzivam denne uz 2 roky. Rozdil v energii a odolnosti je obrovsky.&rdquo;</blockquote>
+    <cite>&mdash; Milena, osobni zkusenost</cite>
+  </div>
+</section>
+
+<!-- Contact form -->
+<section class="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-title">Mas zajem? Napis mi!</div>
+      <p style="color: var(--text-muted);">Vyplnte formular a ozveme se vam co nejdrive.</p>
+      <div class="form-row">
+        <div class="form-field">
+          <label>Jmeno</label>
+          <input type="text" placeholder="Vase jmeno">
+        </div>
+        <div class="form-field">
+          <label>Email</label>
+          <input type="email" placeholder="vas@email.cz">
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Tema</label>
+        <select>
+          <option>Dotaz na produkty</option>
+          <option>Spoluprace s Atomy</option>
+          <option>Pomoc s objednavkou</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Zprava</label>
+        <textarea rows="4" placeholder="Napiste svuj dotaz..."></textarea>
+      </div>
+      <button class="btn-primary" style="width: 100%; margin-top: 24px; padding: 14px;">Odeslat zpravu</button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

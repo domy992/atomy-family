@@ -5,7 +5,15 @@
     "spoluprace": "Partnership",
     "lifestyle": "Lifestyle",
     "kontakt": "Contact",
-    "cta": "Get in touch"
+    "cta": "Get in touch",
+    "allProducts": "All products",
+    "dropAbsolute": "Absolute CellActive",
+    "dropFame": "The Fame",
+    "dropEvening": "Evening Care",
+    "dropCica": "Derma Real Cica",
+    "dropHemohim": "HemoHIM",
+    "catSkincare": "Skincare",
+    "catHealth": "Health"
   },
   "Home": {
     "badge": "Korean cosmetics & wellness",
@@ -31,7 +39,7 @@
     "ctaDesc": "Working with Atomy is flexible, with no upfront costs and team support. Whether you're looking for extra income or a new direction — I'll show you how.",
     "ctaButton": "Learn more",
     "ctaContact": "Get in touch",
-    "aboutTitle": "Milena Nečkářová",
+    "aboutTitle": "Milena Neckařová",
     "aboutLabel": "Your guide",
     "aboutText1": "I know Korean cosmetics and wellness from the inside. For years I've been testing, using and recommending products that truly work. I'm not a salesperson — I'm your advisor who will help you choose exactly what your skin needs.",
     "aboutText2": "If you're also interested in the business side — I'd love to show you how working with Atomy works. No risk, no pressure.",
@@ -162,13 +170,13 @@
     "gdpr": "I agree to the processing of personal data for the purpose of responding to my inquiry. More in",
     "gdprLink": "privacy policy",
     "submit": "Send message",
-    "contactName": "Milena Nečkářová",
+    "contactName": "Milena Neckařová",
     "contactRole": "Your Atomy advisor",
     "contactLocation": "Czech Republic",
     "followUs": "Follow us"
   },
   "Footer": {
-    "desc": "Korean cosmetics and wellness products. Absolute quality at an absolute price. Personal guidance from Milena Nečkářová.",
+    "desc": "Korean cosmetics and wellness products. Absolute quality at an absolute price. Personal guidance from Milena Neckařová.",
     "produkty": "Products",
     "informace": "Information",
     "copyright": "All rights reserved.",

@@ -48,7 +48,7 @@ export default async function ProduktyPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-peach-50 via-white to-sage-50 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-white py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-text">
             {t("title")}

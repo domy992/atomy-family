@@ -28,7 +28,7 @@ export default async function PrivacyPage({ params }: Props) {
             1. Správce údajů
           </h2>
           <p className="text-text-muted leading-relaxed">
-            Správcem vašich osobních údajů je Milena Nečkářová, email:{" "}
+            Správcem vašich osobních údajů je Milena Neckařová, email:{" "}
             <a
               href="mailto:neckarova.milena@gmail.com"
               className="text-primary hover:underline"

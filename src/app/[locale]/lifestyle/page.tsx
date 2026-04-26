@@ -18,7 +18,7 @@ export default async function LifestylePage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-peach-50 via-white to-sage-50 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-white py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-medium text-primary tracking-wide uppercase">
             {t("badge")}
@@ -45,7 +45,7 @@ export default async function LifestylePage({ params }: Props) {
                 className="aspect-[9/16] rounded-2xl bg-surface-muted border-2 border-dashed border-border flex items-center justify-center"
               >
                 <div className="text-center p-4">
-                  <div className="w-12 h-12 rounded-full bg-peach-100 mx-auto flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 mx-auto flex items-center justify-center">
                     <svg
                       className="h-6 w-6 text-primary"
                       fill="none"
@@ -80,7 +80,7 @@ export default async function LifestylePage({ params }: Props) {
               {t("hashtagDesc")}
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <span className="rounded-full bg-peach-100 px-4 py-2 text-sm font-medium text-primary">
+              <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-primary">
                 #AtomyFamily
               </span>
               <span className="rounded-full bg-sage-100 px-4 py-2 text-sm font-medium text-sage-600">

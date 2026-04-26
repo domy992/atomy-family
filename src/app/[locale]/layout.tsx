@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Atomy Family",
   },
   description:
-    "Objevte korejskou kosmetiku Atomy. Absolutní kvalita za absolutní cenu. Produkty, poradenství a příležitost spolupráce s Milenou Nečkářovou.",
+    "Objevte korejskou kosmetiku Atomy. Absolutní kvalita za absolutní cenu. Produkty, poradenství a příležitost spolupráce s Milenou Neckařovou.",
   keywords: [
     "atomy",
     "korejská kosmetika",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     "hemohim",
     "absolute cellactive",
   ],
-  authors: [{ name: "Milena Nečkářová" }],
-  creator: "Milena Nečkářová",
+  authors: [{ name: "Milena Neckařová" }],
+  creator: "Milena Neckařová",
   publisher: "Atomy Family",
   openGraph: {
     type: "website",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: "Atomy Family | Korejská kosmetika a wellness",
     description:
-      "Objevte korejskou kosmetiku Atomy. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Nečkářové.",
+      "Objevte korejskou kosmetiku Atomy. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Neckařové.",
     images: [
       {
         url: "/images/og/og-default.avif",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Atomy Family | Korejská kosmetika a wellness",
     description:
-      "Korejská kosmetika Atomy. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Nečkářové.",
+      "Korejská kosmetika Atomy. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Neckařové.",
     images: ["/images/og/og-default.avif"],
   },
   robots: INDEXING_ENABLED

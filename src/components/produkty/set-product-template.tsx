@@ -50,7 +50,7 @@ export function SetProductTemplate({
   return (
     <>
       {/* 1. Hero */}
-      <section className="bg-gradient-to-br from-peach-50 via-white to-sage-50 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-sage-50 py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -106,7 +106,7 @@ export function SetProductTemplate({
         return (
           <section
             key={i}
-            className={i % 2 === 0 ? "py-16 lg:py-20 bg-surface-muted" : "py-16 lg:py-20"}
+            className={i % 2 === 0 ? "py-12 lg:py-16 bg-surface-muted" : "py-12 lg:py-16"}
           >
             <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
               <div className={`grid lg:grid-cols-2 gap-12 items-center ${isReversed ? "" : ""}`}>
@@ -117,19 +117,19 @@ export function SetProductTemplate({
                   <p className="mt-1 text-sm font-medium text-primary">
                     {product.tagline}
                   </p>
-                  <p className="mt-4 text-text-muted leading-relaxed">
+                  <p className="mt-4 text-text-muted leading-relaxed text-base">
                     {product.description}
                   </p>
                 </div>
                 <div
-                  className={`relative aspect-square rounded-3xl overflow-hidden shadow-lg ${isReversed ? "lg:order-1" : ""}`}
+                  className={`relative aspect-[4/3] max-w-md mx-auto rounded-3xl overflow-hidden shadow-lg ${isReversed ? "lg:order-1" : ""}`}
                 >
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 38vw"
                   />
                 </div>
               </div>
@@ -185,7 +185,7 @@ export function SetProductTemplate({
           <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
               <svg
-                className="h-8 w-8 text-peach-300 mx-auto"
+                className="h-8 w-8 text-blue-300 mx-auto"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

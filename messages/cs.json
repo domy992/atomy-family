@@ -5,7 +5,15 @@
     "spoluprace": "Spolupráce",
     "lifestyle": "Lifestyle",
     "kontakt": "Kontakt",
-    "cta": "Napište mi"
+    "cta": "Napište mi",
+    "allProducts": "Všechny produkty",
+    "dropAbsolute": "Absolute CellActive",
+    "dropFame": "The Fame",
+    "dropEvening": "Evening Care",
+    "dropCica": "Derma Real Cica",
+    "dropHemohim": "HemoHIM",
+    "catSkincare": "Péče o pleť",
+    "catHealth": "Zdraví"
   },
   "Home": {
     "badge": "Korejská kosmetika & péče o zdraví",
@@ -31,7 +39,7 @@
     "ctaDesc": "Podnikání s Atomy je flexibilní, bez vstupních nákladů a s podporou týmu. Ať už hledáte vedlejší příjem nebo nový směr — ráda vám ukážu, jak na to.",
     "ctaButton": "Zjistit víc",
     "ctaContact": "Napište mi",
-    "aboutTitle": "Milena Nečkářová",
+    "aboutTitle": "Milena Neckařová",
     "aboutLabel": "Vaše průvodkyně",
     "aboutText1": "Korejskou kosmetiku a wellness znám zevnitř. Už léta testuji, používám a doporučuji produkty, které opravdu fungují. Nejsem prodejce — jsem vaše poradkyně, která vám pomůže vybrat přesně to, co vaše pleť potřebuje.",
     "aboutText2": "Pokud vás zajímá i obchodní stránka — ráda vám ukážu, jak podnikání s Atomy funguje. Bez rizika, bez tlaku.",
@@ -162,13 +170,13 @@
     "gdpr": "Souhlasím se zpracováním osobních údajů za účelem odpovědi na můj dotaz. Více v",
     "gdprLink": "zásadách ochrany údajů",
     "submit": "Odeslat zprávu",
-    "contactName": "Milena Nečkářová",
+    "contactName": "Milena Neckařová",
     "contactRole": "Vaše Atomy poradkyně",
     "contactLocation": "Česká republika",
     "followUs": "Sledujte nás"
   },
   "Footer": {
-    "desc": "Korejská kosmetika a wellness produkty. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Nečkářové.",
+    "desc": "Korejská kosmetika a wellness produkty. Absolutní kvalita za absolutní cenu. Osobní poradenství od Mileny Neckařové.",
     "produkty": "Produkty",
     "informace": "Informace",
     "copyright": "Všechna práva vyhrazena.",

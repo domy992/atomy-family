@@ -21,7 +21,7 @@ export default async function SpolupracePage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-sage-50 via-white to-peach-50 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-sage-50 via-white to-blue-50 py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-medium text-accent tracking-wide uppercase">
             {t("label")}
@@ -52,7 +52,7 @@ export default async function SpolupracePage({ params }: Props) {
           <div className="grid sm:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
               <div key={i} className="relative">
-                <span className="text-5xl font-bold text-peach-100">
+                <span className="text-5xl font-bold text-blue-100">
                   {String(i).padStart(2, "0")}
                 </span>
                 <h3 className="mt-2 text-lg font-semibold text-text">
@@ -115,7 +115,7 @@ export default async function SpolupracePage({ params }: Props) {
       {/* CTA */}
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8 text-center">
-          <div className="rounded-3xl bg-gradient-to-br from-peach-100 via-peach-50 to-sage-50 p-8 sm:p-12 lg:p-16">
+          <div className="rounded-3xl bg-gradient-to-br from-blue-100 via-blue-50 to-sage-50 p-8 sm:p-12 lg:p-16">
             <h2 className="text-3xl font-bold text-text">
               {t("closingTitle")}
             </h2>

@@ -21,7 +21,7 @@ export default async function OAtomyPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-sage-50 via-white to-peach-50 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-sage-50 via-white to-blue-50 py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -60,8 +60,8 @@ export default async function OAtomyPage({ params }: Props) {
             </p>
           </div>
           <div className="grid sm:grid-cols-3 gap-8">
-            <div className="rounded-2xl bg-peach-50 p-8 text-center">
-              <div className="w-16 h-16 mx-auto rounded-full bg-peach-100 flex items-center justify-center">
+            <div className="rounded-2xl bg-blue-50 p-8 text-center">
+              <div className="w-16 h-16 mx-auto rounded-full bg-blue-100 flex items-center justify-center">
                 <Image
                   src="/images/firma/absolutni_kvalita_webnode_ready.avif"
                   alt={t("qualityTitle")}
