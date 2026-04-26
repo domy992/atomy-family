@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ContactFormInline } from "@/components/kontakt/contact-form-inline";
 import { Link } from "@/i18n/navigation";
 
 export const metadata: Metadata = {
@@ -17,122 +18,35 @@ export default async function KontaktPage({ params }: Props) {
 
   const t = await getTranslations("Kontakt");
 
+  const contactFormLabels = {
+    title: t("title"),
+    subtitle: t("subtitle"),
+    nameLabel: t("nameLabel"),
+    namePlaceholder: t("namePlaceholder"),
+    emailLabel: t("emailLabel"),
+    emailPlaceholder: t("emailPlaceholder"),
+    subjectLabel: t("subjectLabel"),
+    subjectOptions: [
+      { value: "produkty", label: t("subjectProdukty") },
+      { value: "spoluprace", label: t("subjectSpoluprace") },
+      { value: "objednavka", label: t("subjectObjednavka") },
+      { value: "jine", label: t("subjectJine") },
+    ],
+    messageLabel: t("messageLabel"),
+    messagePlaceholder: t("messagePlaceholder"),
+    gdpr: t("gdpr"),
+    gdprLink: t("gdprLink"),
+    submit: t("submit"),
+  };
+
   return (
     <>
+      {/* Contact info + form side by side */}
       <section className="bg-gradient-to-br from-peach-50 via-white to-sage-50 py-16 lg:py-24">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Form */}
-            <div>
-              <h1 className="text-4xl font-bold text-text">{t("title")}</h1>
-              <p className="mt-4 text-text-muted leading-relaxed">
-                {t("subtitle")}
-              </p>
-              <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
-                className="mt-8 space-y-5"
-              >
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value="YOUR_WEB3FORMS_KEY"
-                />
-                <input type="text" name="botcheck" className="hidden" />
-
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-text"
-                  >
-                    {t("nameLabel")}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-text placeholder:text-text-light focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
-                    placeholder={t("namePlaceholder")}
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-text"
-                  >
-                    {t("emailLabel")}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-text placeholder:text-text-light focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
-                    placeholder={t("emailPlaceholder")}
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-text"
-                  >
-                    {t("subjectLabel")}
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    className="mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-text focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
-                  >
-                    <option value="produkty">{t("subjectProdukty")}</option>
-                    <option value="spoluprace">{t("subjectSpoluprace")}</option>
-                    <option value="objednavka">{t("subjectObjednavka")}</option>
-                    <option value="jine">{t("subjectJine")}</option>
-                  </select>
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-text"
-                  >
-                    {t("messageLabel")}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    className="mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-text placeholder:text-text-light focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition resize-none"
-                    placeholder={t("messagePlaceholder")}
-                  />
-                </div>
-                <div className="flex items-start gap-2">
-                  <input
-                    type="checkbox"
-                    id="gdpr"
-                    name="gdpr"
-                    required
-                    className="mt-1 rounded border-border text-primary focus:ring-primary"
-                  />
-                  <label htmlFor="gdpr" className="text-xs text-text-muted">
-                    {t("gdpr")}{" "}
-                    <Link href="/privacy" className="underline hover:text-text">
-                      {t("gdprLink")}
-                    </Link>
-                    .
-                  </label>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-colors shadow-md"
-                >
-                  {t("submit")}
-                </button>
-              </form>
-            </div>
-
-            {/* Contact info */}
-            <div className="lg:pl-12">
+          <div className="grid lg:grid-cols-5 gap-12">
+            {/* Contact info sidebar */}
+            <div className="lg:col-span-2">
               <div className="sticky top-24 space-y-8">
                 <div className="rounded-2xl bg-white shadow-sm p-6 border border-border/50">
                   <div className="flex items-center gap-4">
@@ -243,6 +157,115 @@ export default async function KontaktPage({ params }: Props) {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* Form */}
+            <div className="lg:col-span-3">
+              <h1 className="text-4xl font-bold text-text">{t("title")}</h1>
+              <p className="mt-4 text-text-muted leading-relaxed">
+                {t("subtitle")}
+              </p>
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                className="mt-8 space-y-5"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="YOUR_WEB3FORMS_KEY"
+                />
+                <input type="text" name="botcheck" className="hidden" />
+
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-text"
+                  >
+                    {t("nameLabel")}
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-text placeholder:text-text-light focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
+                    placeholder={t("namePlaceholder")}
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-text"
+                  >
+                    {t("emailLabel")}
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-text placeholder:text-text-light focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
+                    placeholder={t("emailPlaceholder")}
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-text"
+                  >
+                    {t("subjectLabel")}
+                  </label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    className="mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-text focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
+                  >
+                    <option value="produkty">{t("subjectProdukty")}</option>
+                    <option value="spoluprace">{t("subjectSpoluprace")}</option>
+                    <option value="objednavka">{t("subjectObjednavka")}</option>
+                    <option value="jine">{t("subjectJine")}</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-text"
+                  >
+                    {t("messageLabel")}
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    required
+                    className="mt-1 block w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-text placeholder:text-text-light focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition resize-none"
+                    placeholder={t("messagePlaceholder")}
+                  />
+                </div>
+                <div className="flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    id="gdpr"
+                    name="gdpr"
+                    required
+                    className="mt-1 rounded border-border text-primary focus:ring-primary"
+                  />
+                  <label htmlFor="gdpr" className="text-xs text-text-muted">
+                    {t("gdpr")}{" "}
+                    <Link href="/privacy" className="underline hover:text-text">
+                      {t("gdprLink")}
+                    </Link>
+                    .
+                  </label>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-colors shadow-md"
+                >
+                  {t("submit")}
+                </button>
+              </form>
             </div>
           </div>
         </div>

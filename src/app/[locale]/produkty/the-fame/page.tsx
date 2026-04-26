@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ProductPageTemplate } from "@/components/produkty/product-page-template";
+import { SetProductTemplate } from "@/components/produkty/set-product-template";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -28,96 +28,122 @@ export default async function TheFamePage({ params }: Props) {
 
   const t = await getTranslations("Products.fame");
   const tC = await getTranslations("Common");
+  const tF = await getTranslations("ContactForm");
+
+  const cs = locale === "cs";
+
+  const contactFormLabels = {
+    title: tF("title"),
+    subtitle: tF("subtitle"),
+    nameLabel: tF("nameLabel"),
+    namePlaceholder: tF("namePlaceholder"),
+    emailLabel: tF("emailLabel"),
+    emailPlaceholder: tF("emailPlaceholder"),
+    subjectLabel: tF("subjectLabel"),
+    subjectOptions: [
+      { value: "produkty", label: tF("subjectProdukty") },
+      { value: "spoluprace", label: tF("subjectSpoluprace") },
+      { value: "objednavka", label: tF("subjectObjednavka") },
+      { value: "jine", label: tF("subjectJine") },
+    ],
+    messageLabel: tF("messageLabel"),
+    messagePlaceholder: tF("messagePlaceholder"),
+    gdpr: tF("gdpr"),
+    gdprLink: tF("gdprLink"),
+    submit: tF("submit"),
+  };
 
   return (
-    <ProductPageTemplate
+    <SetProductTemplate
       name={t("name")}
       tagline={t("tagline")}
       heroImage="/images/produkty/the-fame/Atomy Fame skin care set.avif"
       introText={t("intro")}
-      problem={t("problem")}
-      usps={[
-        {
-          title: locale === "cs" ? "Toner + Essence" : "Toner + Essence",
-          description: locale === "cs"
-            ? "Lehký toner osvěží a připraví pleť na vstřebání péče. Essence dodává intenzivní hydrataci a posiluje ochrannou bariéru díky beta-glukanu a fermentovaným extraktům."
-            : "Light toner refreshes and prepares skin to absorb care. Essence delivers intensive hydration and strengthens the barrier with beta-glucan and fermented extracts.",
-        },
-        {
-          title: locale === "cs" ? "Eye Cream + Lotion" : "Eye Cream + Lotion",
-          description: locale === "cs"
-            ? "Oční krém redukuje jemné linky a chrání citlivou oblast peptidy a ceramidy. Lotion udržuje rovnováhu olej–voda, arganový olej a bambucké máslo zajišťují hydrataci a pružnost."
-            : "Eye cream reduces fine lines and protects the delicate area with peptides and ceramides. Lotion maintains oil–water balance; argan oil and shea butter ensure hydration and elasticity.",
-        },
-        {
-          title: locale === "cs" ? "Nutrition Cream" : "Nutrition Cream",
-          description: locale === "cs"
-            ? "Závěrečná péče plná výživy. Ceramidy a pět typů kyseliny hyaluronové dodávají hloubkovou hydrataci, posilují bariéru a podporují obnovu buněk."
-            : "Nourishing finale. Ceramides and five types of hyaluronic acid deliver deep hydration, strengthen the barrier and support cell renewal.",
-        },
-      ]}
-      testimonial={{
-        text: locale === "cs"
-          ? "The Fame je jako návštěva korejského salonu — jen v pohodlí domova. Pleť je po něm neuvěřitelně hladká."
-          : "The Fame is like visiting a Korean salon — in the comfort of home. My skin is incredibly smooth afterwards.",
-        author: locale === "cs" ? "Milena, osobní zkušenost" : "Milena, personal experience",
-      }}
-      techDetails={locale === "cs"
-        ? "Řada The Fame je výsledkem spojení tradiční korejské moudrosti a moderní dermatologie. Byla vyvinuta tak, aby pomáhala pleti zvládat každodenní stres, obnovovala její přirozenou rovnováhu a zanechávala ji zdravou, jemnou a zářivou. Produkty jsou lehké, rychle se vstřebávají a vytvářejí harmonickou rutinu vhodnou i pro citlivou pokožku. Klíčové složky: fermentovaný filtrát z Bifida, extrakt z houby Phellinus Linteus, beta-glukan, peptidy, ceramidy, arganový olej, bambucké máslo a pět typů kyseliny hyaluronové."
-        : "The Fame line combines traditional Korean wisdom with modern dermatology. Developed to help skin handle everyday stress, restore its natural balance and leave it healthy, soft and radiant. Products are lightweight, fast-absorbing and create a harmonious routine suitable even for sensitive skin. Key ingredients: fermented Bifida filtrate, Phellinus Linteus mushroom extract, beta-glucan, peptides, ceramides, argan oil, shea butter and five types of hyaluronic acid."
+      whyTogether={cs
+        ? "Rada The Fame je navrzena jako kompletni system, kde kazdy produkt navazuje na predchozi a zesiluje jeho ucinky. Fermentovany filtrat z Bifida, extrakt z houby Phellinus Linteus, beta-glukan, peptidy a ceramidy — to vse pracuje v harmonii pro maximalni vysledky."
+        : "The Fame line is designed as a complete system where each product builds on the previous one and amplifies its effects. Fermented Bifida filtrate, Phellinus Linteus mushroom extract, beta-glucan, peptides and ceramides — all working in harmony for maximum results."
       }
-      purchaseSteps={[
-        locale === "cs"
-          ? "Napište mi nebo se registrujte na oficiální Atomy platformě"
-          : "Write to me or register on the official Atomy platform",
-        locale === "cs"
-          ? "Vyberete si produkty za členské ceny"
-          : "Choose products at member prices",
-        locale === "cs"
-          ? "Objednávka přijde přímo k vám domů"
-          : "Your order arrives directly to your door",
+      products={[
+        {
+          name: "Toner",
+          tagline: cs ? "Osvezeni a priprava pleti" : "Refreshing and preparing skin",
+          description: cs
+            ? "Lehky toner osvezi a pripravi plet na vstrebani pece. Obsahuje fermentovane extrakty, ktere posiluji ochrannou barieru a dodavaji pleti zarivost."
+            : "Light toner refreshes and prepares skin to absorb care. Contains fermented extracts that strengthen the protective barrier and give skin radiance.",
+          image: "/images/produkty/the-fame/fame toner.avif",
+        },
+        {
+          name: "Essence",
+          tagline: cs ? "Intenzivni hydratace" : "Intensive hydration",
+          description: cs
+            ? "Essence dodava intenzivni hydrataci a posiluje ochrannou barieru diky beta-glukanu a fermentovanym extraktum. Plet je po ni hebka a pruzna."
+            : "Essence delivers intensive hydration and strengthens the barrier with beta-glucan and fermented extracts. Skin feels soft and supple.",
+          image: "/images/produkty/the-fame/fame essence.avif",
+        },
+        {
+          name: cs ? "Ocni krem" : "Eye Cream",
+          tagline: cs ? "Pece o citlive ocni okoli" : "Delicate eye area care",
+          description: cs
+            ? "Ocni krem redukuje jemne linky a chrani citlivou oblast peptidy a ceramidy. Dodava pokozce kolem oci mladistvy a odpocinuty vzhled."
+            : "Eye cream reduces fine lines and protects the delicate area with peptides and ceramides. Gives the eye area a youthful, rested appearance.",
+          image: "/images/produkty/the-fame/fame eye cream.avif",
+        },
+        {
+          name: "Lotion",
+          tagline: cs ? "Rovnovaha a hydratace" : "Balance and hydration",
+          description: cs
+            ? "Lotion udrzuje rovnovahu olej-voda, arganovy olej a bambucke maslo zajistuji hydrataci a pruznost po cely den."
+            : "Lotion maintains oil-water balance; argan oil and shea butter ensure hydration and elasticity all day long.",
+          image: "/images/produkty/the-fame/fame lotion.avif",
+        },
+        {
+          name: cs ? "Vyzivny krem" : "Nutrition Cream",
+          tagline: cs ? "Zaverecna pece plna vyzivy" : "Nourishing finale",
+          description: cs
+            ? "Zaverecna pece plna vyzivy. Ceramidy a pet typu kyseliny hyaluronove dodavaji hloubkovou hydrataci, posiluji barieru a podporuji obnovu bunek."
+            : "Nourishing finale. Ceramides and five types of hyaluronic acid deliver deep hydration, strengthen the barrier and support cell renewal.",
+          image: "/images/produkty/the-fame/fame nutrition.avif",
+        },
       ]}
+      howToUse={{
+        text: cs
+          ? "Pouzivejte cele rano i vecer v poradi: toner → essence → ocni krem → lotion → vyzivny krem. Produkty jsou lehke, rychle se vstrebavaji a vytvareji harmonickou rutinu vhodnou i pro citlivou pokozku. Prvni zlepseni hydratace pocitite hned, viditelne zmeny v pruznosti a redukci vrasek ocekavejte po 3-4 tydnech."
+          : "Use the complete routine morning and evening in order: toner → essence → eye cream → lotion → nutrition cream. Products are lightweight, fast-absorbing and create a harmonious routine suitable even for sensitive skin. You'll feel improved hydration immediately, expect visible firmness and wrinkle reduction after 3-4 weeks.",
+      }}
+      testimonial={{
+        text: cs
+          ? "The Fame je jako navsteva korejskeho salonu — jen v pohodli domova. Plet je po nem neuveritelne hladka."
+          : "The Fame is like visiting a Korean salon — in the comfort of home. My skin is incredibly smooth afterwards.",
+        author: cs ? "Milena, osobni zkusenost" : "Milena, personal experience",
+      }}
       faqs={[
         {
-          question: locale === "cs"
-            ? "Jaký je rozdíl mezi The Fame a Absolute CellActive?"
-            : "What's the difference between The Fame and Absolute CellActive?",
-          answer: locale === "cs"
-            ? "The Fame je luxusnější řada s vyšší koncentrací aktivních látek, určená pro náročnou zralou pleť (40+). Absolute CellActive je univerzálnější, vhodná od 30+."
+          question: cs ? "Jaky je rozdil mezi The Fame a Absolute CellActive?" : "What's the difference between The Fame and Absolute CellActive?",
+          answer: cs
+            ? "The Fame je luxusnejsi rada s vyssi koncentraci aktivnich latek, urcena pro narocnou zralou plet (40+). Absolute CellActive je univerzalnejsi, vhodna od 30+."
             : "The Fame is a more luxurious line with higher concentration of active ingredients, designed for demanding mature skin (40+). Absolute CellActive is more universal, suitable from 30+.",
         },
         {
-          question: locale === "cs"
-            ? "Stojí ten rozdíl v ceně za to?"
-            : "Is the price difference worth it?",
-          answer: locale === "cs"
-            ? "Určitě ano — The Fame nabízí koncentrace aktivních látek srovnatelné s luxusními značkami za zlomek jejich ceny."
+          question: cs ? "Stoji ten rozdil v cene za to?" : "Is the price difference worth it?",
+          answer: cs
+            ? "Urcite ano — The Fame nabizi koncentrace aktivnich latek srovnatelne s luxusnimi znackami za zlomek jejich ceny."
             : "Definitely — The Fame offers active ingredient concentrations comparable to luxury brands at a fraction of their price.",
         },
         {
-          question: locale === "cs"
-            ? "Jak dlouho trvá, než uvidím výsledky?"
-            : "How long until I see results?",
-          answer: locale === "cs"
-            ? "První zlepšení hydratace pocítíte hned. Viditelné změny v pružnosti a redukci vrásek očekávejte po 3–4 týdnech."
-            : "You'll feel improved hydration immediately. Expect visible changes in firmness and wrinkle reduction after 3–4 weeks.",
+          question: cs ? "Jak dlouho trva, nez uvidim vysledky?" : "How long until I see results?",
+          answer: cs
+            ? "Prvni zlepseni hydratace pocitite hned. Viditelne zmeny v pruznosti a redukci vrasek ocekavejte po 3-4 tydnech."
+            : "You'll feel improved hydration immediately. Expect visible changes in firmness and wrinkle reduction after 3-4 weeks.",
         },
       ]}
-      gallery={[
-        "/images/produkty/the-fame/fame toner.avif",
-        "/images/produkty/the-fame/fame essence.avif",
-        "/images/produkty/the-fame/fame lotion.avif",
-        "/images/produkty/the-fame/fame eye cream.avif",
-      ]}
       labels={{
-        problemTitle: tC("znateToTitle"),
-        solutionTitle: tC("reseni"),
-        techTitle: tC("procToFunguje"),
-        purchaseTitle: tC("jakObjednat"),
-        purchaseCta: tC("napisteAPomuzu"),
+        whyTogetherTitle: tC("procSpolecne"),
+        howToUseTitle: tC("jakPouzivat"),
         faqTitle: tC("casteOtazky"),
         ctaButton: tC("chciVedetVic"),
+        contactForm: contactFormLabels,
       }}
+      defaultSubject="produkty"
     />
   );
 }

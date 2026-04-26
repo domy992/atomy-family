@@ -182,6 +182,29 @@
     "casteOtazky": "FAQ",
     "chciVedetVic": "I want to know more",
     "napisteAPomuzu": "Write to me and I'll help",
-    "viceInfo": "Learn more"
+    "viceInfo": "Learn more",
+    "procSiHoZamilujete": "Why you'll love it",
+    "procJeJiny": "What makes it different",
+    "proKoho": "Who is it for?",
+    "jakPouzivat": "How to use?",
+    "procSpolecne": "Why together?"
+  },
+  "ContactForm": {
+    "title": "Interested? Get in touch!",
+    "subtitle": "Fill in the form and we'll get back to you as soon as possible.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "subjectLabel": "Subject",
+    "subjectProdukty": "Product inquiry",
+    "subjectSpoluprace": "Atomy partnership",
+    "subjectObjednavka": "Order help",
+    "subjectJine": "Other inquiry",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your question...",
+    "gdpr": "I agree to the processing of personal data for the purpose of responding to my inquiry. More in",
+    "gdprLink": "privacy policy",
+    "submit": "Send message"
   }
 }

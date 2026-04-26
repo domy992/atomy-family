@@ -182,6 +182,29 @@
     "casteOtazky": "Časté otázky",
     "chciVedetVic": "Chci vědět víc",
     "napisteAPomuzu": "Napište mi a pomůžu vám",
-    "viceInfo": "Více info"
+    "viceInfo": "Více info",
+    "procSiHoZamilujete": "Proč si ho zamilujete",
+    "procJeJiny": "Proč je jiný",
+    "proKoho": "Pro koho je určený?",
+    "jakPouzivat": "Jak používat?",
+    "procSpolecne": "Proč společně?"
+  },
+  "ContactForm": {
+    "title": "Máš zájem? Napiš mi!",
+    "subtitle": "Vyplňte formulář a ozveme se vám co nejdříve.",
+    "nameLabel": "Jméno",
+    "namePlaceholder": "Vaše jméno",
+    "emailLabel": "Email",
+    "emailPlaceholder": "vas@email.cz",
+    "subjectLabel": "Téma",
+    "subjectProdukty": "Dotaz na produkty",
+    "subjectSpoluprace": "Spolupráce s Atomy",
+    "subjectObjednavka": "Pomoc s objednávkou",
+    "subjectJine": "Jiný dotaz",
+    "messageLabel": "Zpráva",
+    "messagePlaceholder": "Napište svůj dotaz...",
+    "gdpr": "Souhlasím se zpracováním osobních údajů za účelem odpovědi na můj dotaz. Více v",
+    "gdprLink": "zásadách ochrany údajů",
+    "submit": "Odeslat zprávu"
   }
 }
