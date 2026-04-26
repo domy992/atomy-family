@@ -11,7 +11,16 @@ const productLinks = [
   { key: "dropFame", href: "/produkty/the-fame", cat: "catSkincare" },
   { key: "dropEvening", href: "/produkty/evening-care", cat: "catSkincare" },
   { key: "dropCica", href: "/produkty/derma-real-cica", cat: "catSkincare" },
+  { key: "dropSunscreen", href: "/produkty/sunscreen", cat: "catSkincare" },
+  { key: "dropSunCushion", href: "/produkty/sun-cushion", cat: "catSkincare" },
+  { key: "dropResetBalm", href: "/produkty/reset-balm", cat: "catSkincare" },
+  { key: "dropHerbalSampon", href: "/produkty/herbal-sampon", cat: "catHair" },
+  { key: "dropHerbalKondicioner", href: "/produkty/herbal-kondicioner", cat: "catHair" },
+  { key: "dropScalpcareSampon", href: "/produkty/scalpcare-sampon", cat: "catHair" },
+  { key: "dropScalpcareKondicioner", href: "/produkty/scalpcare-kondicioner", cat: "catHair" },
   { key: "dropHemohim", href: "/produkty/hemohim", cat: "catHealth" },
+  { key: "dropBiotic", href: "/produkty/biotic-10", cat: "catHealth" },
+  { key: "dropHongsamdan", href: "/produkty/hongsamdan", cat: "catHealth" },
 ] as const;
 
 const otherNav = [
@@ -76,7 +85,7 @@ export function Header() {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-80 rounded-2xl bg-white shadow-lg border border-border/50 p-4 z-50">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-96 rounded-2xl bg-white shadow-lg border border-border/50 p-4 z-50">
                   <Link
                     href="/produkty"
                     className="block text-sm font-medium text-primary hover:underline mb-3 px-2"
@@ -85,37 +94,25 @@ export function Header() {
                     {t("allProducts")} →
                   </Link>
 
-                  <p className="text-xs font-semibold text-text-light uppercase tracking-wider px-2 mb-2">
-                    {t("catSkincare")}
-                  </p>
-                  <div className="grid grid-cols-2 gap-1 mb-3">
-                    {productLinks.filter(p => p.cat === "catSkincare").map((item) => (
-                      <Link
-                        key={item.key}
-                        href={item.href}
-                        className="rounded-lg px-3 py-2 text-sm text-text-muted hover:bg-surface-muted hover:text-primary transition-colors"
-                        onClick={() => setDropdownOpen(false)}
-                      >
-                        {t(item.key)}
-                      </Link>
-                    ))}
-                  </div>
-
-                  <p className="text-xs font-semibold text-text-light uppercase tracking-wider px-2 mb-2">
-                    {t("catHealth")}
-                  </p>
-                  <div className="grid grid-cols-2 gap-1">
-                    {productLinks.filter(p => p.cat === "catHealth").map((item) => (
-                      <Link
-                        key={item.key}
-                        href={item.href}
-                        className="rounded-lg px-3 py-2 text-sm text-text-muted hover:bg-surface-muted hover:text-primary transition-colors"
-                        onClick={() => setDropdownOpen(false)}
-                      >
-                        {t(item.key)}
-                      </Link>
-                    ))}
-                  </div>
+                  {(["catSkincare", "catHair", "catHealth"] as const).map((cat) => (
+                    <div key={cat} className="mb-3 last:mb-0">
+                      <p className="text-xs font-semibold text-text-light uppercase tracking-wider px-2 mb-1">
+                        {t(cat)}
+                      </p>
+                      <div className="grid grid-cols-2 gap-1">
+                        {productLinks.filter(p => p.cat === cat).map((item) => (
+                          <Link
+                            key={item.key}
+                            href={item.href}
+                            className="rounded-lg px-3 py-2 text-sm text-text-muted hover:bg-surface-muted hover:text-primary transition-colors"
+                            onClick={() => setDropdownOpen(false)}
+                          >
+                            {t(item.key)}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               )}
             </div>

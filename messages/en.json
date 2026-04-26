@@ -11,8 +11,18 @@
     "dropFame": "The Fame",
     "dropEvening": "Evening Care",
     "dropCica": "Derma Real Cica",
+    "dropSunscreen": "Essence Sunscreen",
+    "dropSunCushion": "Sun Cushion",
+    "dropResetBalm": "Reset Balm",
+    "dropHerbalSampon": "Herbal Shampoo",
+    "dropHerbalKondicioner": "Herbal Conditioner",
+    "dropScalpcareSampon": "Scalpcare Shampoo",
+    "dropScalpcareKondicioner": "Scalpcare Conditioner",
     "dropHemohim": "HemoHIM",
+    "dropBiotic": "Biotic 10+",
+    "dropHongsamdan": "Hongsamdan",
     "catSkincare": "Skincare",
+    "catHair": "Hair Care",
     "catHealth": "Health"
   },
   "Home": {
@@ -100,6 +110,51 @@
       "tagline": "Calm for irritated skin",
       "intro": "Derma Real Cica is a special line designed for sensitive, irritated and problematic skin. Centella asiatica (cica) is a legendary Korean herb known for its regenerative and anti-inflammatory effects.",
       "problem": "Your skin is sensitive and reacts to everything? Redness, irritation, dry patches? You're afraid to try new cosmetics because you never know how your skin will react?"
+    },
+    "sunscreen": {
+      "name": "Atomy Absolute Essence Sunscreen",
+      "category": "Skincare",
+      "shortDesc": "SPF50+ protection that brightens and shields your skin every day"
+    },
+    "sunCushion": {
+      "name": "Atomy Urban Shield Sun Cushion",
+      "category": "Skincare",
+      "shortDesc": "Sunscreen, skincare and base in one"
+    },
+    "resetBalm": {
+      "name": "Absolute Reset Balm",
+      "category": "Skincare",
+      "shortDesc": "Instant hydration and visibly smoother skin"
+    },
+    "herbalSampon": {
+      "name": "Atomy Herbal Shampoo",
+      "category": "Hair Care",
+      "shortDesc": "Herbal shampoo for strong, clean and nourished hair"
+    },
+    "herbalKondicioner": {
+      "name": "Atomy Herbal Conditioner",
+      "category": "Hair Care",
+      "shortDesc": "Full of nutrients for silky and radiant hair"
+    },
+    "scalpcareSampon": {
+      "name": "Atomy Scalpcare Shampoo",
+      "category": "Hair Care",
+      "shortDesc": "Ayurvedic care for clean and balanced scalp"
+    },
+    "scalpcareKondicioner": {
+      "name": "Atomy Scalpcare Conditioner",
+      "category": "Hair Care",
+      "shortDesc": "Revive and balance your scalp with Ayurveda-inspired care"
+    },
+    "biotic": {
+      "name": "Atomy Biotic 10+",
+      "category": "Health",
+      "shortDesc": "3 billion live bacteria for your healthy digestion"
+    },
+    "hongsamdan": {
+      "name": "Atomy Hongsamdan",
+      "category": "Health",
+      "shortDesc": "Energy, vitality and mental balance in every sachet"
     }
   },
   "OAtomy": {

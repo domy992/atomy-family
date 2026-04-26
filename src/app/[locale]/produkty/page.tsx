@@ -19,9 +19,9 @@ const products = [
     image: "/images/produkty/the-fame/Atomy Fame skin care set.avif",
   },
   {
-    key: "hemohim" as const,
-    href: "/produkty/hemohim",
-    image: "/images/produkty/hemohim/hemohim (1).avif",
+    key: "evening" as const,
+    href: "/produkty/evening-care",
+    image: "/images/produkty/evening/evening set.avif",
   },
   {
     key: "cica" as const,
@@ -29,9 +29,54 @@ const products = [
     image: "/images/hero/top_produkty_01.avif",
   },
   {
-    key: "evening" as const,
-    href: "/produkty/evening-care",
-    image: "/images/produkty/evening/evening set.avif",
+    key: "sunscreen" as const,
+    href: "/produkty/sunscreen",
+    image: "/images/produkty/absolute/Absolute set (1).avif",
+  },
+  {
+    key: "sunCushion" as const,
+    href: "/produkty/sun-cushion",
+    image: "/images/produkty/absolute/Absolute set (1).avif",
+  },
+  {
+    key: "resetBalm" as const,
+    href: "/produkty/reset-balm",
+    image: "/images/produkty/absolute/Absolute set (1).avif",
+  },
+  {
+    key: "herbalSampon" as const,
+    href: "/produkty/herbal-sampon",
+    image: "/images/produkty/sampony/herbal šampon (1).avif",
+  },
+  {
+    key: "herbalKondicioner" as const,
+    href: "/produkty/herbal-kondicioner",
+    image: "/images/produkty/sampony/herbal kondicioner (1).avif",
+  },
+  {
+    key: "scalpcareSampon" as const,
+    href: "/produkty/scalpcare-sampon",
+    image: "/images/produkty/sampony/scalpcare šampon.avif",
+  },
+  {
+    key: "scalpcareKondicioner" as const,
+    href: "/produkty/scalpcare-kondicioner",
+    image: "/images/produkty/sampony/scalpcare condicioner (1).avif",
+  },
+  {
+    key: "hemohim" as const,
+    href: "/produkty/hemohim",
+    image: "/images/produkty/hemohim/hemohim (1).avif",
+  },
+  {
+    key: "biotic" as const,
+    href: "/produkty/biotic-10",
+    image: "/images/produkty/doplnky/biotic (1).avif",
+  },
+  {
+    key: "hongsamdan" as const,
+    href: "/produkty/hongsamdan",
+    image: "/images/produkty/doplnky/ženšen.avif",
   },
 ];
 

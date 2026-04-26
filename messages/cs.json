@@ -11,8 +11,18 @@
     "dropFame": "The Fame",
     "dropEvening": "Evening Care",
     "dropCica": "Derma Real Cica",
+    "dropSunscreen": "Essence Sunscreen",
+    "dropSunCushion": "Sun Cushion",
+    "dropResetBalm": "Reset Balm",
+    "dropHerbalSampon": "Herbal šampón",
+    "dropHerbalKondicioner": "Herbal kondicionér",
+    "dropScalpcareSampon": "Scalpcare šampón",
+    "dropScalpcareKondicioner": "Scalpcare kondicionér",
     "dropHemohim": "HemoHIM",
+    "dropBiotic": "Biotic 10+",
+    "dropHongsamdan": "Hongsamdan",
     "catSkincare": "Péče o pleť",
+    "catHair": "Péče o vlasy",
     "catHealth": "Zdraví"
   },
   "Home": {
@@ -100,6 +110,51 @@
       "tagline": "Klid pro podrážděnou pleť",
       "intro": "Derma Real Cica je speciální řada určená pro citlivou, podrážděnou a problematickou pleť. Centella asiatica (cica) je legendární korejská bylina známá pro své regenerační a protizánětlivé účinky.",
       "problem": "Vaše pleť je citlivá a reaguje na všechno? Zarudnutí, podráždění, suché fleky? Bojíte se zkoušet novou kosmetiku, protože nikdy nevíte, jak pleť zareaguje?"
+    },
+    "sunscreen": {
+      "name": "Atomy Absolute Essence Sunscreen",
+      "category": "Péče o pleť",
+      "shortDesc": "SPF50+ ochrana, která rozjasní a ochrání pleť každý den"
+    },
+    "sunCushion": {
+      "name": "Atomy Urban Shield Sun Cushion",
+      "category": "Péče o pleť",
+      "shortDesc": "Opalovací krém, péče o pleť a podklad v jednom"
+    },
+    "resetBalm": {
+      "name": "Absolute Reset Balm",
+      "category": "Péče o pleť",
+      "shortDesc": "Okamžitá hydratace a viditelně hladší pleť"
+    },
+    "herbalSampon": {
+      "name": "Atomy Herbal Shampoo",
+      "category": "Péče o vlasy",
+      "shortDesc": "Bylinný šampón pro silné, čisté a vyživené vlasy"
+    },
+    "herbalKondicioner": {
+      "name": "Atomy Herbal Conditioner",
+      "category": "Péče o vlasy",
+      "shortDesc": "Plný živin pro hebké a zářivé vlasy"
+    },
+    "scalpcareSampon": {
+      "name": "Atomy Scalpcare Shampoo",
+      "category": "Péče o vlasy",
+      "shortDesc": "Ájurvédská péče pro čistou a vyrovnanou pokožku hlavy"
+    },
+    "scalpcareKondicioner": {
+      "name": "Atomy Scalpcare Conditioner",
+      "category": "Péče o vlasy",
+      "shortDesc": "Oživte a vyvažte vlasovou pokožku s péčí inspirovanou Ájurvédou"
+    },
+    "biotic": {
+      "name": "Atomy Biotic 10+",
+      "category": "Doplňky zdraví",
+      "shortDesc": "3 miliardy živých bakterií pro tvé zdravé trávení"
+    },
+    "hongsamdan": {
+      "name": "Atomy Hongsamdan",
+      "category": "Doplňky zdraví",
+      "shortDesc": "Energie, vitalita a duševní rovnováha v každém sáčku"
     }
   },
   "OAtomy": {
