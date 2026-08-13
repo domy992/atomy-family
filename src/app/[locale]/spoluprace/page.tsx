@@ -32,14 +32,6 @@ export default async function SpolupracePage({ params }: Props) {
           <p className="mt-6 text-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
             {t("subtitle")}
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/kontakt"
-              className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-colors shadow-md"
-            >
-              {t("cta")}
-            </Link>
-          </div>
         </div>
       </section>
 
