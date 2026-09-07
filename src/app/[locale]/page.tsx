@@ -67,19 +67,18 @@ export default async function HomePage({ params }: Props) {
                 </Link>
               </div>
             </div>
-            <div className="relative w-full max-w-sm mx-auto lg:max-w-md pb-8">
-              <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg">
-                <Image
-                  src="/images/produkty/absolute/Absolute set (2).avif"
-                  alt="Atomy Absolute CellActive sada"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 80vw, 40vw"
-                />
-              </div>
+            <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
+              <Image
+                src="/images/produkty/absolute/Absolute set (2).avif"
+                alt="Atomy Absolute CellActive sada"
+                width={1080}
+                height={1080}
+                className="w-full h-auto object-contain drop-shadow-xl"
+                priority
+                sizes="(max-width: 768px) 90vw, 50vw"
+              />
               {/* Social proof badge */}
-              <div className="absolute bottom-4 -left-4 bg-white rounded-xl shadow-lg px-5 py-3 z-10 max-w-[180px]">
+              <div className="absolute bottom-4 left-0 bg-white rounded-xl shadow-lg px-5 py-3 z-10 max-w-[180px]">
                 <p className="text-xs text-text-muted">{t("heroBadgeLabel")}</p>
                 <p className="text-sm font-semibold text-text leading-tight">{t("heroBadgeValue")}</p>
               </div>
