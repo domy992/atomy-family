@@ -76,7 +76,7 @@ export default async function HomePage({ params }: Props) {
             <div className="relative w-full max-w-sm mx-auto lg:max-w-md pb-8">
               <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg">
                 <Image
-                  src="/images/milena/20250603_150311.avif"
+                  src="/images/produkty/absolute/Absolute set (2).webp"
                   alt="Milena Neckařová"
                   fill
                   className="object-cover"
