@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { JsonLd } from "@/components/seo/json-ld";
 import "../globals.css";
 
 const dmSans = DM_Sans({
@@ -75,14 +76,6 @@ export const metadata: Metadata = {
         },
       }
     : { index: false, follow: false },
-  alternates: {
-    canonical: "/",
-    languages: {
-      cs: "/cs",
-      en: "/en",
-      "x-default": "/cs",
-    },
-  },
 };
 
 export function generateStaticParams() {
@@ -107,10 +100,17 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html lang={locale} className={dmSans.variable}>
       <body className="min-h-dvh flex flex-col font-sans antialiased overflow-y-auto">
         <NextIntlClientProvider messages={messages}>
+          <a
+            href="#obsah"
+            className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-primary focus:px-5 focus:py-3 focus:text-sm focus:font-medium focus:text-white"
+          >
+            {locale === "cs" ? "Přeskočit na obsah" : "Skip to content"}
+          </a>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main id="obsah" className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>
+        <JsonLd locale={locale} />
       </body>
     </html>
   );

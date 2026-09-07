@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
-export const metadata: Metadata = {
-  title: "Spolupráce",
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta" });
+  const tNav = await getTranslations({ locale, namespace: "Nav" });
+  return {
+    title: tNav("spoluprace"),
+    description: t("spolupraceDesc"),
+    alternates: alternates(locale, "/spoluprace"),
+  };
+}
 
 const benefitKeys = ["b1", "b2", "b3", "b4", "b5", "b6"] as const;
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SingleProductTemplate } from "@/components/produkty/single-product-template";
 
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: cs
       ? "SPF50+ PA++++ ochrana před UVA i UVB paprsky. Rozjasní a sjednotí tón pleti díky CellActive™ Brightening Code."
       : "SPF50+ PA++++ protection against UVA and UVB rays. Brightens and evens skin tone with CellActive™ Brightening Code.",
-    alternates: { canonical: `/${locale}/produkty/sunscreen` },
+    alternates: alternates(locale, "/produkty/sunscreen"),
     openGraph: {
       title: "Atomy Absolute Essence Sunscreen | Atomy Family",
       description: cs

@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "O Atomy",
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta" });
+  const tNav = await getTranslations({ locale, namespace: "Nav" });
+  return {
+    title: tNav("oAtomy"),
+    description: t("oAtomyDesc"),
+    alternates: alternates(locale, "/o-atomy"),
+  };
+}
 
 const milestoneYears = ["2009", "2016", "2018", "2023"] as const;
 

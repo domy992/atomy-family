@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SingleProductTemplate } from "@/components/produkty/single-product-template";
 
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: locale === "cs"
       ? "Bylinný šampón pro silné, čisté a vyživené vlasy"
       : "Herbal shampoo for strong, clean and nourished hair",
-    alternates: { canonical: `/${locale}/produkty/herbal-sampon` },
+    alternates: alternates(locale, "/produkty/herbal-sampon"),
   };
 }
 

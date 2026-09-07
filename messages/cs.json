@@ -1,4 +1,14 @@
 {
+  "Meta": {
+    "homeDesc": "Korejská kosmetika Atomy — absolutní kvalita za férovou cenu. Péče o pleť, vlasy i zdraví s osobním poradenstvím od Mileny Neckářové.",
+    "produktyDesc": "Korejská kosmetika a doplňky Atomy — péče o pleť, vlasy i zdraví. Absolute CellActive, The Fame, HemoHIM a další. Ráda vám poradím s výběrem.",
+    "oAtomyDesc": "Kdo je Atomy? Korejská značka s výzkumem Kolmar Korea a principem absolutní kvalita za absolutní cenu. Přečtěte si příběh a filozofii firmy.",
+    "spolupraceDesc": "Spolupráce s Atomy — flexibilní podnikání bez vstupních investic a povinných odběrů. Ukážu vám, jak začít jednoduše a s podporou týmu.",
+    "kontaktDesc": "Napište Mileně Neckářové — ráda poradím s výběrem korejské kosmetiky Atomy i s možnostmi spolupráce. Ozvu se vám co nejdříve.",
+    "lifestyleDesc": "#AtomyFamily — inspirace, rutiny a zkušenosti s korejskou kosmetikou Atomy. Nahlédněte, jak produkty zapadají do každodenní péče.",
+    "jakNakupovatDesc": "Jak nakupovat u Atomy — registrace zdarma, bez povinných odběrů a startovacích balíčků. Členské ceny v oficiálním e-shopu eu.atomy.com.",
+    "privacyDesc": "Zásady ochrany osobních údajů webu atomy-family.cz — jak nakládáme s údaji z kontaktního formuláře a jaká máte práva."
+  },
   "Nav": {
     "produkty": "Produkty",
     "oAtomy": "O Atomy",

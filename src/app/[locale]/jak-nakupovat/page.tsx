@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { alternates } from "@/lib/seo";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
 type Props = { params: Promise<{ locale: string }> };
 
-export const metadata: Metadata = { title: "Jak nakupovat" };
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta" });
+  return {
+    title: locale === "cs" ? "Jak nakupovat" : "How to buy",
+    description: t("jakNakupovatDesc"),
+    alternates: alternates(locale, "/jak-nakupovat"),
+  };
+}
 
 export default async function JakNakupovatPage({ params }: Props) {
   const { locale } = await params;

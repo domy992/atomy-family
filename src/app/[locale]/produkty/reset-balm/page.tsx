@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SingleProductTemplate } from "@/components/produkty/single-product-template";
 
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: cs
       ? "Okamžitá hydratace. Viditelně hladší pleť. Luxusní péče vždy po ruce."
       : "Instant hydration. Visibly smoother skin. Luxury care always at hand.",
-    alternates: { canonical: `/${locale}/produkty/reset-balm` },
+    alternates: alternates(locale, "/produkty/reset-balm"),
     openGraph: {
       title: "Absolute Reset Balm | Atomy Family",
       description: cs

@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
-export const metadata: Metadata = {
-  title: "Produkty",
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta" });
+  const tNav = await getTranslations({ locale, namespace: "Nav" });
+  return {
+    title: tNav("produkty"),
+    description: t("produktyDesc"),
+    alternates: alternates(locale, "/produkty"),
+  };
+}
 
 const products = [
   {

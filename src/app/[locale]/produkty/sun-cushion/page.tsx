@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SingleProductTemplate } from "@/components/produkty/single-product-template";
 
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: cs
       ? "Víc než jen SPF — luxusní péče vždy po ruce. Opalovací krém, péče o pleť a podklad v jednom."
       : "More than just SPF — luxury care always at hand. Sunscreen, skincare and base in one.",
-    alternates: { canonical: `/${locale}/produkty/sun-cushion` },
+    alternates: alternates(locale, "/produkty/sun-cushion"),
     openGraph: {
       title: "Atomy Urban Shield Sun Cushion | Atomy Family",
       description: cs

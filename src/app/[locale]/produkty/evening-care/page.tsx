@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SetProductTemplate } from "@/components/produkty/set-product-template";
 
@@ -12,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("name"),
     description: t("intro").slice(0, 160),
-    alternates: { canonical: `/${locale}/produkty/evening-care` },
+    alternates: alternates(locale, "/produkty/evening-care"),
     openGraph: {
       title: `${t("name")} | Atomy Family`,
       description: t("shortDesc"),

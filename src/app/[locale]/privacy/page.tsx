@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { alternates } from "@/lib/seo";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Ochrana osobních údajů",
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta" });
+  return {
+    title: locale === "cs" ? "Ochrana osobních údajů" : "Privacy policy",
+    description: t("privacyDesc"),
+    alternates: alternates(locale, "/privacy"),
+  };
+}
 
 type Props = {
   params: Promise<{ locale: string }>;

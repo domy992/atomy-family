@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
+import { alternates } from "@/lib/seo";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ContactFormInline } from "@/components/kontakt/contact-form-inline";
 import { Link } from "@/i18n/navigation";
 
-export const metadata: Metadata = {
-  title: "Kontakt",
-};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Meta" });
+  const tNav = await getTranslations({ locale, namespace: "Nav" });
+  return {
+    title: tNav("kontakt"),
+    description: t("kontaktDesc"),
+    alternates: alternates(locale, "/kontakt"),
+  };
+}
 
 type Props = {
   params: Promise<{ locale: string }>;
