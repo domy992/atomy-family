@@ -6,7 +6,7 @@ const featuredProducts = [
   {
     key: "absolute" as const,
     href: "/produkty/absolute-cellactive",
-    image: "/images/produkty/absolute/Absolute Serum (1).avif",
+    image: "/images/produkty/absolute/Absolute set (2).avif",
   },
   {
     key: "fame" as const,
@@ -21,12 +21,7 @@ const featuredProducts = [
   {
     key: "evening" as const,
     href: "/produkty/evening-care",
-    image: "/images/produkty/evening/evening set.avif",
-  },
-  {
-    key: "cica" as const,
-    href: "/produkty/derma-real-cica",
-    image: "/images/hero/top_produkty_01.avif",
+    image: "/images/produkty/evening/evening set (1).avif",
   },
 ];
 
@@ -149,56 +144,35 @@ export default async function HomePage({ params }: Props) {
               {t("produktyAll")} &rarr;
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProducts.slice(0, 3).map((product) => (
+          <div className="grid sm:grid-cols-2 gap-6">
+            {featuredProducts.map((product) => (
               <Link
                 key={product.key}
                 href={product.href}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-[4/3] relative overflow-hidden">
+                <div className="aspect-square relative overflow-hidden bg-gray-50">
                   <Image
                     src={product.image}
                     alt={tProducts(`${product.key}.name`)}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </div>
-                <div className="p-5">
-                  <h3 className="font-semibold text-text group-hover:text-primary transition-colors">
+                <div className="p-6">
+                  <span className="text-xs font-semibold text-primary uppercase tracking-widest">
+                    {tProducts(`${product.key}.category`)}
+                  </span>
+                  <h3 className="mt-1 text-lg font-semibold text-text group-hover:text-primary transition-colors">
                     {tProducts(`${product.key}.name`)}
                   </h3>
-                  <p className="mt-1 text-sm text-text-muted">
+                  <p className="mt-2 text-sm text-text-muted leading-relaxed">
                     {tProducts(`${product.key}.shortDesc`)}
                   </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-6 grid sm:grid-cols-2 gap-6">
-            {featuredProducts.slice(3).map((product) => (
-              <Link
-                key={product.key}
-                href={product.href}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex"
-              >
-                <div className="w-1/3 relative overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={tProducts(`${product.key}.name`)}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, 25vw"
-                  />
-                </div>
-                <div className="p-5 flex-1">
-                  <h3 className="font-semibold text-text group-hover:text-primary transition-colors">
-                    {tProducts(`${product.key}.name`)}
-                  </h3>
-                  <p className="mt-1 text-sm text-text-muted">
-                    {tProducts(`${product.key}.shortDesc`)}
-                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
+                    {t("produktyDetail")} <span aria-hidden>→</span>
+                  </span>
                 </div>
               </Link>
             ))}
