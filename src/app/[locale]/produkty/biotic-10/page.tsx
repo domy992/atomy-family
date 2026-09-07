@@ -9,7 +9,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Products.biotic10" });
+  const t = await getTranslations({ locale, namespace: "Products.biotic" });
   return {
     title: t("name"),
     description: t("intro").slice(0, 160),
@@ -27,7 +27,7 @@ export default async function Biotic10Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations("Products.biotic10");
+  const t = await getTranslations("Products.biotic");
   const tC = await getTranslations("Common");
   const tF = await getTranslations("ContactForm");
 

@@ -64,7 +64,7 @@ export function Header() {
             </span>
           </Link>
 
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <div className="hidden lg:flex lg:items-center lg:gap-8">
             {/* Produkty with dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
@@ -137,7 +137,7 @@ export function Header() {
 
           <button
             type="button"
-            className="md:hidden p-2 text-text-muted hover:text-text"
+            className="lg:hidden p-2 text-text-muted hover:text-text"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -152,7 +152,7 @@ export function Header() {
         </div>
 
         {mobileOpen && (
-          <div className="md:hidden pb-4 border-t border-border/50 mt-2 pt-4">
+          <div className="lg:hidden pb-4 border-t border-border/50 mt-2 pt-4">
             <div className="flex flex-col gap-1">
               {/* Produkty accordion on mobile */}
               <button

@@ -18,7 +18,7 @@ const featuredProducts = [
   {
     key: "hemohim" as const,
     href: "/produkty/hemohim",
-    image: "/images/produkty/hemohim/hemohim (1).avif",
+    image: "/images/produkty/hemohim/hemohim (3).avif",
   },
   {
     key: "evening" as const,
