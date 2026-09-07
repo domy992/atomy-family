@@ -70,26 +70,13 @@ export default async function HomePage({ params }: Props) {
             <div className="relative w-full max-w-sm mx-auto lg:max-w-md pb-8">
               <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg">
                 <Image
-                  src="/images/produkty/absolute/Absolute set (2).webp"
-                  alt="Milena Neckařová"
+                  src="/images/produkty/absolute/Absolute set poster (1).jpg"
+                  alt="Atomy Absolute CellActive sada"
                   fill
                   className="object-cover"
                   priority
                   sizes="(max-width: 768px) 80vw, 40vw"
                 />
-              </div>
-              {/* Floating product shot */}
-              <div className="hidden sm:block absolute -top-6 -right-6 lg:-right-10 w-40 lg:w-52 aspect-square rounded-2xl bg-white shadow-xl p-3 rotate-3 z-10">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/images/hero/top_produkty_01.avif"
-                    alt="Nejoblíbenější Atomy produkty"
-                    fill
-                    className="object-contain"
-                    priority
-                    sizes="(max-width: 1024px) 160px, 208px"
-                  />
-                </div>
               </div>
               {/* Social proof badge */}
               <div className="absolute bottom-4 -left-4 bg-white rounded-xl shadow-lg px-5 py-3 z-10 max-w-[180px]">
