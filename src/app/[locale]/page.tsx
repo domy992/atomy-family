@@ -188,34 +188,6 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      {/* CTA — Spoluprace */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-gradient-to-br from-blue-100 via-blue-50 to-sage-50 p-8 sm:p-12 lg:p-16 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-text">
-              {t("ctaTitle")}
-            </h2>
-            <p className="mt-4 text-text-muted max-w-xl mx-auto leading-relaxed">
-              {t("ctaDesc")}
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link
-                href="/spoluprace"
-                className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-colors shadow-md"
-              >
-                {t("ctaButton")}
-              </Link>
-              <Link
-                href="/kontakt"
-                className="rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-medium text-text hover:bg-surface-muted transition-colors"
-              >
-                {t("ctaContact")}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* About Milena */}
       <section className="py-16 lg:py-24 bg-surface-warm">
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
@@ -232,7 +204,7 @@ export default async function HomePage({ params }: Props) {
               </div>
             </div>
             <div>
-              <p className="text-sm font-medium text-primary tracking-wide uppercase">
+              <p className="text-xs font-semibold text-primary tracking-widest uppercase">
                 {t("aboutLabel")}
               </p>
               <h2 className="mt-2 text-3xl font-bold text-text">
@@ -244,11 +216,36 @@ export default async function HomePage({ params }: Props) {
               <p className="mt-3 text-text-muted leading-relaxed">
                 {t("aboutText2")}
               </p>
+              <p className="mt-3 text-text-muted leading-relaxed">
+                {t("aboutText3")}
+              </p>
               <Link
                 href="/kontakt"
                 className="mt-6 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-colors"
               >
                 {t("aboutCta")}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA — Spoluprace */}
+      <section className="py-16 lg:py-24">
+        <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl bg-gradient-to-br from-blue-100 via-blue-50 to-sage-50 p-8 sm:p-12 lg:p-16 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-text">
+              {t("ctaTitle")}
+            </h2>
+            <p className="mt-4 text-text-muted max-w-xl mx-auto leading-relaxed">
+              {t("ctaDesc")}
+            </p>
+            <div className="mt-8">
+              <Link
+                href="/spoluprace"
+                className="rounded-full bg-primary px-8 py-3 text-sm font-medium text-white hover:bg-primary-hover transition-colors shadow-md"
+              >
+                {t("ctaButton")}
               </Link>
             </div>
           </div>
