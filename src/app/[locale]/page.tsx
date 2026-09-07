@@ -92,8 +92,11 @@ export default async function HomePage({ params }: Props) {
         <div className="mx-auto max-w-[var(--container-max)] px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-text">{t("benefitsTitle")}</h2>
-            <p className="mt-4 text-text-muted leading-relaxed">
+            <p className="mt-4 font-semibold text-text leading-relaxed">
               {t("benefitsSubtitle")}
+            </p>
+            <p className="mt-2 text-text-muted leading-relaxed">
+              {t("benefitsSubtitle2")}
             </p>
           </div>
           <div className="mt-12 grid sm:grid-cols-3 gap-8">
