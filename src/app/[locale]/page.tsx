@@ -65,12 +65,6 @@ export default async function HomePage({ params }: Props) {
                 >
                   {t("ctaProdukty")}
                 </Link>
-                <Link
-                  href="/spoluprace"
-                  className="rounded-full border border-border px-6 py-3 text-sm font-medium text-text hover:bg-surface-muted transition-colors"
-                >
-                  {t("ctaSpoluprace")}
-                </Link>
               </div>
             </div>
             <div className="relative w-full max-w-sm mx-auto lg:max-w-md pb-8">
