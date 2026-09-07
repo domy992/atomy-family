@@ -70,10 +70,10 @@ export default async function HomePage({ params }: Props) {
             <div className="relative w-full max-w-sm mx-auto lg:max-w-md pb-8">
               <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-lg">
                 <Image
-                  src="/images/produkty/absolute/Absolute set poster (1).jpg"
+                  src="/images/produkty/absolute/Absolute set (2).avif"
                   alt="Atomy Absolute CellActive sada"
                   fill
-                  className="object-cover object-bottom"
+                  className="object-cover"
                   priority
                   sizes="(max-width: 768px) 80vw, 40vw"
                 />
