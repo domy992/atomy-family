@@ -73,7 +73,7 @@ export default async function HomePage({ params }: Props) {
                   src="/images/produkty/absolute/Absolute set poster (1).jpg"
                   alt="Atomy Absolute CellActive sada"
                   fill
-                  className="object-cover"
+                  className="object-cover object-bottom"
                   priority
                   sizes="(max-width: 768px) 80vw, 40vw"
                 />
